@@ -3,7 +3,7 @@ import Cells from './impl/Cells'
 import Footer from './impl/Footer'
 import Fun from './impl/Fun'
 import Loading from './impl/Loading'
-import ProjectLink from './impl/ProjectLink'
+import ProjectButton from './impl/ProjectButton'
 import Wallpaper from './impl/Wallpaper'
 
 
@@ -13,6 +13,6 @@ export {
   Footer,
   Fun,
   Loading,
-  ProjectLink,
+  ProjectButton,
   Wallpaper
 }
