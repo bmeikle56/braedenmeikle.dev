@@ -30,9 +30,9 @@ function Projects() {
               flexDirection: 'column',
             }}
             >
-              <ProjectButton txt={'actionplayer.app'} route={'/action-player'}/>
-              <ProjectButton txt={'berzerkagile.dev'} route={'/bz-dev'}/>
-              <ProjectButton txt={'premiumswift.dev'} route={'/premium-swift'}/>
+              <ProjectButton txt={'actionplayer.app'} route={'/projects/action-player'}/>
+              <ProjectButton txt={'berzerkagile.dev'} route={'/projects/bz-dev'}/>
+              <ProjectButton txt={'premiumswift.dev'} route={'/projects/premium-swift'}/>
             </div>
           </div>
         </motion.div>

@@ -8,7 +8,7 @@ import DownloadPage from './page/dwnl'
 function BZDevApp() {
   return (
     <Routes>
-      <Route path='/' element={<BZDevHome/>} />
+      <Route index element={<BZDevHome/>} />
       <Route path='/auth' element={<AuthPage/>}/>
       <Route path='/dash' element={<DashboardPage/>}/>
       <Route path='/dwnl' element={<DownloadPage/>}/>

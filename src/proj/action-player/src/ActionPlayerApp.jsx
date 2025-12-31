@@ -8,8 +8,8 @@ import ActionPlayerDownload from './pages/download'
 function ActionPlayerApp() {
   return (
     <Routes>
-      <Route path='/' element={<ActionPlayerHome/>} />
-      <Route path='/download' element={<ActionPlayerDownload/>} />
+      <Route index element={<ActionPlayerHome/>} />
+      <Route path='download' element={<ActionPlayerDownload/>} />
     </Routes>
   )
 }
