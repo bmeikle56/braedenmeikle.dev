@@ -13,9 +13,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/projects' element={<Projects/>}/>
-        <Route path='/projects/action-player/*' element={<ActionPlayerApp/>}/>
+        {/* <Route path='/projects/action-player/*' element={<ActionPlayerApp/>}/>
         <Route path='/projects/bz-dev/*' element={<BZDevApp/>}/>
-        <Route path='/projects/premium-swift/*' element={<PremiumSwiftApp/>}/>
+        <Route path='/projects/premium-swift/*' element={<PremiumSwiftApp/>}/> */}
       </Routes>
     </Router>
   )

@@ -177,7 +177,7 @@ function Cells() {
       <div style={{gap: 16, display: 'flex', flexDirection: 'column'}}>
         <FavoriteSongs/>
         <Goals/>
-        <FavoriteTeams/>
+        {/* <FavoriteTeams/> */}
         {/* <FavoriteFunction/> */}
       </div>
     )

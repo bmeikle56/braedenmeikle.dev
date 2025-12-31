@@ -116,24 +116,24 @@ function Pfp() {
   )
 }
 
-function OmahaHandOfTheDay() {
-  // cards must be unique
-  const cards = new Set()
-  while (cards.size < 5) {
-    cards.add(getRandomCard())
-  }
+// function OmahaHandOfTheDay() {
+//   // cards must be unique
+//   const cards = new Set()
+//   while (cards.size < 5) {
+//     cards.add(getRandomCard())
+//   }
 
-  const rankOrder = ['a', 'k', 'q', 'j', 't', '9', '8', '7', '6', '5', '4', '3', '2']
+//   const rankOrder = ['a', 'k', 'q', 'j', 't', '9', '8', '7', '6', '5', '4', '3', '2']
 
-  // cards sorked by rank, left highest
-  const sortedCards = Array.from(cards).sort((a, b) => {
-    const rankA = a[0]
-    const rankB = b[0]
-    return rankOrder.indexOf(rankA) - rankOrder.indexOf(rankB)
-  })
+//   // cards sorked by rank, left highest
+//   const sortedCards = Array.from(cards).sort((a, b) => {
+//     const rankA = a[0]
+//     const rankB = b[0]
+//     return rankOrder.indexOf(rankA) - rankOrder.indexOf(rankB)
+//   })
 
-  return <Hand cards={sortedCards} />
-}
+//   return <Hand cards={sortedCards} />
+// }
 
 function getRandomCard() {
   const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', 't', 'j', 'q', 'k', 'a']
@@ -143,18 +143,18 @@ function getRandomCard() {
   return rank + suit
 }
 
-function Hand({ cards }) {
-  return (
-    <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: 5, width: 220}}>
-      {cards.map((card) => {
-        return <div style={{width: 50, height: 50}}>
-          <div style={{background: 'rgb(12,123,0)', boxShadow: `0px 0px 8px rgb(12,123,0)`, borderRadius: 3, width: 36, height: 48, zIndex: 0, marginTop: 22}}/>
-          <img alt={card} src={`${process.env.PUBLIC_URL}/img/cards/${card[0]}/${card[1]}.png`} style={{width: 46, height: 46, zIndex: 1, marginTop: -47, marginBottom: 25, marginLeft: -5, opacity: 0.7}}/>
-        </div>
-      })}
-    </div>
-  )
-}
+// function Hand({ cards }) {
+//   return (
+//     <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: 5, width: 220}}>
+//       {cards.map((card) => {
+//         return <div style={{width: 50, height: 50}}>
+//           <div style={{background: 'rgb(12,123,0)', boxShadow: `0px 0px 8px rgb(12,123,0)`, borderRadius: 3, width: 36, height: 48, zIndex: 0, marginTop: 22}}/>
+//           <img alt={card} src={`${process.env.PUBLIC_URL}/img/cards/${card[0]}/${card[1]}.png`} style={{width: 46, height: 46, zIndex: 1, marginTop: -47, marginBottom: 25, marginLeft: -5, opacity: 0.7}}/>
+//         </div>
+//       })}
+//     </div>
+//   )
+// }
   
 function Fun() { 
   return (
@@ -166,7 +166,7 @@ function Fun() {
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: 'fit-content' }}>
-            <OmahaHandOfTheDay/>
+            {/* <OmahaHandOfTheDay/> */}
           </div>
         </div>
         <Cells/>
