@@ -3,7 +3,7 @@ import { useLoading } from '../hooks/useLoading'
 import { Footer, Fun, Loading, Wallpaper } from '../cmp/Components'
 
 function Home() {
-  const isLoading = useLoading(2700)
+  const isLoading = useLoading()
 
   return (
     <>
