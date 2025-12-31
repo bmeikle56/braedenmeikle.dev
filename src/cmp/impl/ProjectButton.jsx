@@ -10,7 +10,8 @@ function ProjectButton({ txt, route }) {
       width: '160px',
       background: 'black',
       padding: '0 16px 0 16px',
-      borderRadius: 16
+      borderRadius: 16,
+      border: 'none'
     }}
     onClick={() => navigate(route)}
     >
