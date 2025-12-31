@@ -112,6 +112,15 @@ function FavoriteSongs() {
     // },
     {
       song: 'Freedom',
+      artist: 'Oliver Heldens',
+      imgLink: 'https://i.postimg.cc/m2LdpSd0/freedom.png',
+      alt: 'Freedom by Oliver Heldens album cover',
+      size: {width: 50, height: 25},
+      imgPadding: '0 0 0 15px'
+    },
+    {
+      song: 'No Charge',
+      artist: 'Future',
       imgLink: 'https://i.postimg.cc/m2LdpSd0/freedom.png',
       alt: 'Freedom by Oliver Heldens album cover',
       size: {width: 50, height: 25},
@@ -120,13 +129,13 @@ function FavoriteSongs() {
   ]
 
   function FavoriteSong({ meta }) {
-    return <div style={{display: 'flex', width: '100%', justifyContent:'flex-start', alignItems:'center'}}>
-      <img src={meta.imgLink} style={{width: meta.size.width, height: meta.size.height, padding: meta.imgPadding}} alt={meta.alt}/>
-      <p style={{color: 'rgb(12,123,0)', paddingRight: 10, textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>{meta.song}</p>
-      <div style={{display: 'flex', width: '100%', justifyContent:'flex-end', paddingRight: 30}}>
+    return <div style={{display: 'flex', width: '100%', justifyContent: 'space-between', alignItems:'center'}}>
+      {/* <img src={meta.imgLink} style={{width: meta.size.width, height: meta.size.height, padding: meta.imgPadding}} alt={meta.alt}/> */}
+      <p style={{color: 'rgb(12,123,0)', textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>{meta.song}</p>
+      <p style={{whiteSpace: 'nowrap', color: 'rgb(12,123,0)', paddingRight: 10, textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>{meta.artist}</p>
+      <div style={{display: 'flex', paddingRight: 0}}>
         <BouncingLines/>
       </div>
-      
     </div>
   }
 
@@ -198,4 +207,4 @@ function Cells() {
   )
 }
 
-export default Cells
+export default FavoriteSongs
