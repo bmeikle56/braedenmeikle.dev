@@ -5,11 +5,12 @@ import Fun from './impl/Fun'
 import Loading from './impl/Loading'
 import ProjectButton from './impl/ProjectButton'
 import Wallpaper from './impl/Wallpaper'
-import { VDiv, HDiv } from './impl/GeometricDiv'
+import { VDiv, HDiv, ExpandingHDiv } from './impl/GeometricDiv'
 
 export {
   BackButton,
   Cells,
+  ExpandingHDiv,
   Footer,
   Fun,
   HDiv,

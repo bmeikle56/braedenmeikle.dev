@@ -15,4 +15,15 @@ function HDiv({ width }) {
   )
 }
 
-export { VDiv, HDiv } 
+function ExpandingHDiv() {
+  return (
+    <div style={{
+      height: '2px', 
+      width: '100%', 
+      background: 'rgb(20,20,20)', 
+      borderRadius: '8px',
+    }}/>
+  )
+}
+
+export { VDiv, HDiv, ExpandingHDiv } 

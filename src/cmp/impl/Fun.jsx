@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { darkGray, superDarkGray, onlineGreen } from '../../styles/colors'
 import FavoriteSongs from './Cells'
-import { VDiv, HDiv } from './GeometricDiv'
+import { VDiv, HDiv, ExpandingHDiv } from './GeometricDiv'
 
 function Title() { 
   const style = {
@@ -156,6 +156,12 @@ function Pfp() {
 //     </div>
 //   )
 // }
+
+function Circle() {
+  return (
+    <div style={{height: 8, width: 8, borderRadius: '50%', color: 'rgb(12,123,0)', boxShadow: '0px 0px 8px rgb(12,123,0), 0px 0px 4px rgb(12,123,0)'}}/>
+  )
+}
   
 function Fun() { 
   return (
@@ -177,6 +183,32 @@ function Fun() {
           </div>
         </div> */}
         <FavoriteSongs/>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '32px 0 20px 0'}}>
+          <HDiv width={230}/>
+        </div>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(8, 1fr)', gridTemplateRows: 'repeat(2, 1fr)', gap: '4px', width: 'fit-content'}}>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+          </div>
+          <VDiv height={30}/>
+          <p style={{color: 'rgb(12,123,0)', textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>Washington, DC</p>
+        </div>
+        
         {/* <Cells/> */}
       </div>
     </div>

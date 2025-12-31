@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 // import { txtCol, specialColor } from '../styles/colors.js'
+import { HDiv, VDiv } from './GeometricDiv'
 
 function Cell({ content }) {
   return <div id='cell' style={{
@@ -101,50 +102,55 @@ function Goals() {
 //   )
 // }
 
+
 function FavoriteSongs() {
   const songMetas = [
-    // {
-    //   song: 'Escape',
-    //   imgLink: 'https://i.scdn.co/image/ab67616d0000b273d8f57323c8f338a647193ad8',
-    //   alt: 'Escape (Remix) album cover',
-    //   size: {width: 25, height: 25},
-    //   imgPadding: '0 18px 0 25px'
-    // },
     {
       song: 'Freedom',
-      artist: 'Oliver Heldens',
-      imgLink: 'https://i.postimg.cc/m2LdpSd0/freedom.png',
-      alt: 'Freedom by Oliver Heldens album cover',
-      size: {width: 50, height: 25},
-      imgPadding: '0 0 0 15px'
+      artist: 'Oliver Heldens'
     },
     {
       song: 'No Charge',
-      artist: 'Future',
-      imgLink: 'https://i.postimg.cc/m2LdpSd0/freedom.png',
-      alt: 'Freedom by Oliver Heldens album cover',
-      size: {width: 50, height: 25},
-      imgPadding: '0 0 0 15px'
+      artist: 'Future'
     }
   ]
 
   function FavoriteSong({ meta }) {
-    return <div style={{display: 'flex', width: '100%', justifyContent: 'space-between', alignItems:'center'}}>
-      {/* <img src={meta.imgLink} style={{width: meta.size.width, height: meta.size.height, padding: meta.imgPadding}} alt={meta.alt}/> */}
-      <p style={{color: 'rgb(12,123,0)', textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>{meta.song}</p>
-      <p style={{whiteSpace: 'nowrap', color: 'rgb(12,123,0)', paddingRight: 10, textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>{meta.artist}</p>
-      <div style={{display: 'flex', paddingRight: 0}}>
-        <BouncingLines/>
-      </div>
-    </div>
+    return (
+      // <div>
+        
+        <div style={{display: 'flex', width: '100%', justifyContent: 'space-between', alignItems:'center'}}>
+          <p style={{color: 'rgb(12,123,0)', textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>{meta.song}</p>
+          <p style={{whiteSpace: 'nowrap', color: 'rgb(12,123,0)', paddingRight: 10, textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>{meta.artist}</p>
+        </div>
+      // </div>
+    )
   }
 
-  return (<div style={{display: 'flex', flexDirection:'column', width: '100%'}}>
-    {songMetas.map((songMeta) => {
-      return <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: 40}}>
+  return (<div style={{display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'space-between'}}>
+    <div style={{display: 'flex', flexDirection:'column', gap: 30}}>
+      <BouncingLines/>
+      <BouncingLines/>
+    </div>
+    <div style={{padding: '0 14px 0 14px'}}>
+      <VDiv height={72}/>
+    </div>
+    <div style={{display: 'flex', flexDirection:'column', width: '100%', gap: 0}}>
+      <FavoriteSong meta={{
+        song: 'Freedom',
+        artist: 'Oliver Heldens'
+      }}/>
+      <FavoriteSong meta={{
+        song: 'No Charge',
+        artist: 'Future'
+      }}/>
+    </div>
+    
+    {/* {songMetas.map((songMeta) => {
+      return <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', width: '100%', height: 40}}>
         <FavoriteSong meta={songMeta}/>
       </div>
-    })}
+    })} */}
   </div>)
 }
 
