@@ -7,29 +7,3 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: black;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-#title {
-  font-size: 32px;
-  padding: 0;
-  color: rgb(174, 0, 255);
-}
-
-#main-div {
-  padding-bottom: 10vh;
-  padding-top: 5vh;
-}
-
-@media (max-width: 600px) {
-  #main-div {
-    padding-top: 10vh;
-    padding-bottom: 15vh;
-  }
-
-  #title {
-    font-size: 24px;
-  }
-}

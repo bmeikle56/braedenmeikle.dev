@@ -7,7 +7,6 @@ function ProjectButton({ txt, route }) {
     <button style={{
       display: 'flex', 
       justifyContent: 'flex-start', 
-      width: '160px',
       background: 'black',
       padding: '0 16px 0 16px',
       borderRadius: 16,

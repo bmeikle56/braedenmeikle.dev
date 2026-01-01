@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import ErrorMessage from '../cmp/ErrorMessage'
 import Title from '../cmp/Title'
 
+import { ContentScaffold } from '../../../../cmp/Components'
+
 let palette = {
   white: 'rgb(255,255,255)',
   pink: 'rgba(186, 2, 100, 1)',
@@ -21,20 +23,17 @@ function Comments() {
       <div style={{display: 'flex', alignItems: 'center', width: '100%'}}>
         <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
         <div style={{width: 8, padding: 0, margin: 0}}/>
-        <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'define input range by callee such that caller must satisfy it at compile time'}</p>
-      </div>
-      <div style={{display: 'flex', alignItems: 'center', width: '100%'}}>
-        <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
-        <div style={{width: 8, padding: 0, margin: 0}}/>
-        <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'no more guards and early exits to require proper, expected input'}</p>
-      </div>
-      <div style={{display: 'flex', alignItems: 'center', width: '100%'}}>
-        <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
-      </div>
-      <div style={{display: 'flex', alignItems: 'center', width: '100%'}}>
-        <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
-        <div style={{width: 8, padding: 0, margin: 0}}/>
         <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'[ optional ]'}</p>
+      </div>
+      <div style={{display: 'flex', alignItems: 'center', width: '100%'}}>
+        <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
+        <div style={{width: 8, padding: 0, margin: 0}}/>
+        <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'define input range by callee, caller must satisfy'}</p>
+      </div>
+      <div style={{display: 'flex', alignItems: 'center', width: '100%'}}>
+        <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
+        <div style={{width: 8, padding: 0, margin: 0}}/>
+        <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'proper input enforced at compile time'}</p>
       </div>
       <div style={{height: 24, padding: 0, margin: 0}}/>
     </div>
@@ -75,17 +74,11 @@ function CallFunction({ suit, rank }) {
   )
 }
 
-function PremiumSwiftHome() {
+function PremiumSwiftContent() {
   return (
-    <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', width: '100vw', height: '100vh', gap: 20, whiteSpace: 'pre-wrap'}}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ delay: 0.8, duration: 1 }}
-    id='main-div'
-    >
-      <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', maxWidth: '550px', width: '80vw', gap: 10, whiteSpace: 'pre-wrap', height: '70vh'}}>
+      <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', maxWidth: '400px', width: '75vw', whiteSpace: 'pre-wrap', padding: 0}}>
       <Title/>
-      <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4, width: '100%'}}>
+      <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', width: '100%'}}>
         <Comments/>
         <div style={{display: 'flex'}}>
           <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>struct</pre>
@@ -180,7 +173,7 @@ function PremiumSwiftHome() {
         <div style={{display: 'flex', alignItems: 'center'}}>
           <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
           <div style={{width: 8, padding: 0, margin: 0}}/>
-          <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'proper function call, no errors thrown during compile or runtime'}</p>
+          <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'proper function call, no errors'}</p>
         </div>
         <CallFunction suit={'"d"'} rank={2}/>
       </div>
@@ -195,7 +188,16 @@ function PremiumSwiftHome() {
         <CallFunction suit={'"hearts"'} rank={12}/>
       </div>
       </div>
-    </motion.div>
+  )
+}
+
+function PremiumSwiftHome() {
+  return (
+    <ContentScaffold 
+    content={ PremiumSwiftContent() }
+    txt={'Projects'}
+    route={'/projects'}
+    />
   )
 }
 

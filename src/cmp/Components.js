@@ -6,10 +6,12 @@ import Loading from './impl/Loading'
 import ProjectButton from './impl/ProjectButton'
 import Wallpaper from './impl/Wallpaper'
 import { VDiv, HDiv, ExpandingHDiv } from './impl/GeometricDiv'
+import ContentScaffold from './impl/ContentScaffold'
 
 export {
   BackButton,
   Cells,
+  ContentScaffold,
   ExpandingHDiv,
   Footer,
   Fun,
