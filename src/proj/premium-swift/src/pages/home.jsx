@@ -83,7 +83,7 @@ function PremiumSwiftHome() {
     transition={{ delay: 0.8, duration: 1 }}
     id='main-div'
     >
-      <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', maxWidth: '550px', width: '80vw', height: '100vh', gap: 20, whiteSpace: 'pre-wrap'}}>
+      <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', maxWidth: '550px', width: '80vw', gap: 10, whiteSpace: 'pre-wrap', height: '70vh'}}>
       <Title/>
       <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4, width: '100%'}}>
         <Comments/>
