@@ -159,7 +159,17 @@ function Pfp() {
 
 function Circle() {
   return (
-    <div style={{height: 8, width: 8, borderRadius: '50%', color: 'rgb(12,123,0)', boxShadow: '0px 0px 8px rgb(12,123,0), 0px 0px 4px rgb(12,123,0)'}}/>
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: [0,1,0] }}
+    transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut', repeatDelay: 3, delay: Math.random() * 5 }}
+    style={{
+      height: 8, 
+      width: 8, 
+      borderRadius: '50%', 
+      color: 'rgb(12,123,0)', 
+      boxShadow: '0px 0px 8px rgb(12,123,0), 0px 0px 4px rgb(12,123,0)'
+    }}/>
   )
 }
   
