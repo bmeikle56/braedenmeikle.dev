@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion'
 import { darkGray, superDarkGray, onlineGreen } from '../../styles/colors'
-import Cells from './Cells'
+import FavoriteSongs from './Cells'
+import { VDiv, HDiv, ExpandingHDiv } from './GeometricDiv'
 
 function Title() { 
   const style = {
     fontSize: '28px',
-    paddingBottom: '8px',
+    paddingBottom: '0px',
     textAlign: 'center',
     color: 'rgb(12,123,0)',
     textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'
@@ -16,10 +17,10 @@ function Title() {
 
 function ActivityTracker() {
   const activity = [
+    [1,0,0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,1],
-    [1]
+    [0]
   ]
 
   function currentDayActivity() {
@@ -63,7 +64,7 @@ function ActivityTracker() {
       <div style={{display: 'flex', justifyContent: 'center'}}>
         <Pfp/>
       </div>
-      <div style={{height: '72px', width:'2px', background: 'rgb(30,30,30)', borderRadius: '8px'}}/>
+      <VDiv height={72}/>
       <div style={{display: 'flex', flexDirection: 'column', gap: '12px', justifyContent: 'center', alignItems: 'center'}}>
         <div style={{display: 'grid', justifyContent: 'center', gap: '2px'}}>
           {activity.map((row, i) =>
@@ -135,13 +136,13 @@ function Pfp() {
 //   return <Hand cards={sortedCards} />
 // }
 
-function getRandomCard() {
-  const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', 't', 'j', 'q', 'k', 'a']
-  const suits = ['h', 'd', 'c', 's']
-  const rank = ranks[Math.floor(Math.random() * ranks.length)]
-  const suit = suits[Math.floor(Math.random() * suits.length)]
-  return rank + suit
-}
+// function getRandomCard() {
+//   const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', 't', 'j', 'q', 'k', 'a']
+//   const suits = ['h', 'd', 'c', 's']
+//   const rank = ranks[Math.floor(Math.random() * ranks.length)]
+//   const suit = suits[Math.floor(Math.random() * suits.length)]
+//   return rank + suit
+// }
 
 // function Hand({ cards }) {
 //   return (
@@ -155,21 +156,70 @@ function getRandomCard() {
 //     </div>
 //   )
 // }
+
+function Circle() {
+  return (
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: [0,1,0] }}
+    transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut', repeatDelay: 3, delay: Math.random() * 5 }}
+    style={{
+      height: 8, 
+      width: 8, 
+      borderRadius: '50%', 
+      color: 'rgb(12,123,0)', 
+      boxShadow: '0px 0px 8px rgb(12,123,0), 0px 0px 4px rgb(12,123,0)'
+    }}/>
+  )
+}
   
 function Fun() { 
   return (
     <div id='fun' style={{zIndex: 1, position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
       <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', background: 'black', height: 'fit-content', paddingBottom: 30, paddingRight: 25, paddingLeft: 25, borderRadius: 16}}>
         <Title/>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', paddingBottom: '32px'}}>
+          <HDiv width={230}/>
+        </div>
         <div>
           <ActivityTracker/>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: 'fit-content' }}>
-            {/* <OmahaHandOfTheDay/> */}
-          </div>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '32px 0 20px 0'}}>
+          <HDiv width={230}/>
         </div>
-        <Cells/>
+        {/* <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: 'fit-content' }}>
+            <OmahaHandOfTheDay/>
+          </div>
+        </div> */}
+        <FavoriteSongs/>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '32px 0 20px 0'}}>
+          <HDiv width={230}/>
+        </div>
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+          <div style={{display: 'grid', gridTemplateColumns: 'repeat(8, 1fr)', gridTemplateRows: 'repeat(2, 1fr)', gap: '4px', width: 'fit-content'}}>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+            <Circle/>
+          </div>
+          <VDiv height={30}/>
+          <p style={{color: 'rgb(12,123,0)', textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>Washington, DC</p>
+        </div>
+        
+        {/* <Cells/> */}
       </div>
     </div>
   )
