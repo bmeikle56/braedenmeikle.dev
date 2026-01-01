@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "engines": {
-    "node": "18.x"
+    "node": ">=20"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
