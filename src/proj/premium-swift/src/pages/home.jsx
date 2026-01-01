@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import ErrorMessage from '../cmp/ErrorMessage'
 import Title from '../cmp/Title'
 

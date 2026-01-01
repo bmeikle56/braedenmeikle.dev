@@ -8,7 +8,7 @@ function Diamond() {
       </defs>
       <polygon
         points='30,0 60,50 30,100 0,50'
-        fill='rgb(0,255,255)'
+        fill='rgb(12,123,0)'
         filter='url(#glow)'
       />
     </svg>

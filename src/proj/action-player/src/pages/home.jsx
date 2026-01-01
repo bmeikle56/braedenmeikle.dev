@@ -1,37 +1,35 @@
-import { motion } from 'framer-motion'
 import Diamond from '../cmp/Diamond'
-import PokerDegenTitle from '../cmp/Title'
+import ActionPlayerTitle from '../cmp/Title'
 import Video from '../cmp/Video'
-import { useState } from 'react'
-import Loading from '../cmp/Loading'
 import DownloadButton from '../cmp/DownloadButton'
 
-function ActionPlayerHome() {
-  const [isLoading, setLoading] = useState(true)
+import { ContentScaffold } from '../../../../cmp/Components'
 
-  if (isLoading) {
-    return <Loading setLoading={setLoading}/>
-  } else {
-    return (
-      <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', width: '100vw', height: '100vh'}}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 1.2, duration: 2.0 }}
-      >
-        <div className='title-view' style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
-          <Diamond/>
-          <PokerDegenTitle/>
-        </div>
-        <div style={{height: '10vh'}}/>
-        <div style={{display: 'flex', justifyContent: 'center', width: '80%', marginTop: -30}}>
-          <Video device={'iPhone'}/>
-          {/* <Video device={'iPad'}/> */}
-        </div>
-        <div style={{height: 40}}/>
-        <DownloadButton/>
-      </motion.div>
-    )
-  }
+function ActionPlayerContent() {
+  return (
+    <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', width: '700px', height: '100vh'}}>
+      <div className='title-view' style={{display: 'flex', justifyContent: 'center', alignItems:'center', background: 'black', padding: '0 30px 0 30px', borderRadius: 20, marginTop: 50}}>
+        <Diamond/>
+        <ActionPlayerTitle/>
+      </div>
+      <div style={{height: '10vh'}}/>
+      <Video device={'iPhone'}/>
+      <div style={{height: 40}}/>
+      <a href='/dwnld/ActionPlayer.zip'>
+        <pre style={{color: 'rgb(12,123,0)', padding: 12, background: 'black', borderRadius: 10}}>ActionPlayer.zip</pre>
+      </a>
+    </div>
+  )
+}
+
+function ActionPlayerHome() {
+  return (
+    <ContentScaffold
+    content={ ActionPlayerContent() }
+    txt={'Projects'}
+    route={'/projects'}
+    />
+  )
 }
 
 export default ActionPlayerHome

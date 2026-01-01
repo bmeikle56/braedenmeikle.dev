@@ -1,12 +1,13 @@
-function PokerDegenTitle() {
+function ActionPlayerTitle() {
   return (
     <h1 className='title' style={{
-      color: 'rgb(0,255,255)',
-      textShadow: '0 0 6px white'
+      padding: 0,
+      color: 'rgb(12,123,0)',
+      textShadow: '0 0 18px rgb(155,155,155)'
     }}>
-      PokerDegen
+      Action Player
     </h1>
   )
 }
 
-export default PokerDegenTitle
+export default ActionPlayerTitle

@@ -1,9 +1,7 @@
 function Video({ device }) {
-  const source = `../../assets/videos/${device}.mp4`
-
   return (
     <video 
-      src={source}
+      src={`/vid/${device}.mp4`}
       autoPlay 
       muted 
       loop 
