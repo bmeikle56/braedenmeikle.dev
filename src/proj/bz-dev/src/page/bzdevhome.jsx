@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolder } from '@fortawesome/free-solid-svg-icons'
 import { BBullet, BZtxt, Inlinetxt, CBList, Footer, Spacer, TabBar, RichTicket, ccode, CCode, BZCCode } from '../cmp/Components'
+import { ContentScaffold } from '../../../../cmp/Components'
 
 function BZList2({ items, height }) {
   return (
@@ -313,20 +314,97 @@ const sections = [
 //   )
 // }
 
-export default function BZDevHome() {
+// export default function BZDevHome() {
+//   return (
+//     <motion.div
+//     initial={{ opacity: 0 }}
+//     animate={{ opacity: 1 }}
+//     transition={{ delay: 0.5 }}
+//     >
+//       <div style={{display: 'flex', justifyContent: 'center', width: '100%'}}>
+//         <TabBar/>
+//       </div>
+//       {sections.map((section, i) => {
+//         return <div key={i} className='content-pair'><ContentPair left={section.left} right={section.right}/></div>
+//       })}
+//       <Footer/>
+//     </motion.div>
+//   )
+// }
+
+function TerminalWindow( content ) {
   return (
-    <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ delay: 0.5 }}
-    >
-      <div style={{display: 'flex', justifyContent: 'center', width: '100%'}}>
-        <TabBar/>
+    <div style={{border: '2px solid rgb(25,25,25)', borderRadius: '12px', display:'flex', flexDirection:'column', padding: 20, background: 'black'}}>
+      <div style={{display: 'flex', gap: 8, alignItems: 'center', justifyContent:'center', width: '100%'}}>
+        <div style={{display: 'flex', marginRight: 'auto', gap: 6}}>
+          <Circle color={'rgba(255,0,0,0.4)'}/>
+          <Circle color={'rgba(255,255,0,0.4)'}/>
+          <Circle color={'rgba(0,255,0,0.4)'}/>
+        </div>
+        <div style={{display: 'flex', marginRight: 'auto', alignItems: 'center', gap: 6}}>
+          <FontAwesomeIcon icon={faFolder} style={{ color: 'rgb(238, 0, 254)' }} />
+          <Inlinetxt txt={'bz-dev'} color={'rgb(60,60,60)'}/>
+        </div>
       </div>
-      {sections.map((section, i) => {
-        return <div key={i} className='content-pair'><ContentPair left={section.left} right={section.right}/></div>
-      })}
-      <Footer/>
-    </motion.div>
+      <Spacer height={16}/>
+      <div style={{background: 'rgb(25,25,25)', height: 2, width: '100%'}}/>
+      <Spacer height={10}/>
+      {content}      
+    </div>
   )
 }
+
+{/* <CCode txt={'# work on a ticket'} color={ccode.green}/>
+      
+      <Spacer height={16}/>
+      <CCode txt={'# update me on my tickets'} color={ccode.green}/>
+      <BZCCode txt={'bz updateme'}/> */}
+
+
+function HomeContent() {
+  return (
+    <div style={{ display: 'flex', gap: 12, flexDirection: 'column'}}>
+      {TerminalWindow(
+        <div style={{ display: 'flex', flexDirection: 'column'}}>
+          <div>
+            <CCode txt={'braedenmeikle@macbookpro ~ % '} color={ccode.white}/>
+            <BZCCode txt={'bz make \\'}/>
+          </div>
+          <BZCCode txt={'-r=bz-dev \\'}/>
+          <BZCCode txt={'-k=launch-site \\'}/>
+          <BZCCode txt={'-n="purchase domain, forward DNS"'}/>
+          <Spacer height={16}/>
+          <CCode txt={'Added!'} color={ccode.green}/>
+        </div>
+      )}
+      {TerminalWindow(
+        <div style={{ display: 'flex', flexDirection: 'column'}}>
+          <div>
+            <CCode txt={'braedenmeikle@macbookpro ~ % '} color={ccode.white}/>
+            <BZCCode txt={'bz workon \\'}/>
+          </div>
+          <BZCCode txt={'-r=bz-dev \\'}/>
+          <BZCCode txt={'-k=launch-site'}/>
+          <Spacer height={16}/>
+          <CCode txt={'{'} color={ccode.white}/>
+          <CCode txt={'  bz-dev {'} color={ccode.white}/>
+          <CCode txt={'    * launch-site'} color={ccode.green}/>
+          <CCode txt={'  }'} color={ccode.white}/>
+          <CCode txt={'}'} color={ccode.white}/>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function BZDevHome() {
+  return (
+    <ContentScaffold
+    content={HomeContent()}
+    txt={'Projects'}
+    route={'/projects'}
+    />
+  )
+}
+
+export default BZDevHome

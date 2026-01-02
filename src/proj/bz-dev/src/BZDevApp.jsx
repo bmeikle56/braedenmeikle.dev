@@ -9,9 +9,9 @@ function BZDevApp() {
   return (
     <Routes>
       <Route index element={<BZDevHome/>} />
-      <Route path='/auth' element={<AuthPage/>}/>
-      <Route path='/dash' element={<DashboardPage/>}/>
-      <Route path='/dwnl' element={<DownloadPage/>}/>
+      {/* <Route path='/projects/bz-dev/auth' element={<AuthPage/>}/>
+      <Route path='/projects/bz-dev/dash' element={<DashboardPage/>}/>
+      <Route path='/projects/bz-dev/dwnl' element={<DownloadPage/>}/> */}
     </Routes>
   )
 }
