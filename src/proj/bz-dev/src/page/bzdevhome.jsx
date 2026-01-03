@@ -364,6 +364,15 @@ function TerminalWindow( content ) {
 function HomeContent() {
   return (
     <div style={{ display: 'flex', gap: 12, flexDirection: 'column'}}>
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', background: 'black', alignItems: 'flex-start', paddingLeft: 40, paddingTop: 20, paddingBottom: 20, borderRadius: 12}}>
+        <div>
+          <BZCCode txt={'bz'}/>
+          <CCode txt={' is a command line tool to keep'} color={ccode.white}/>
+        </div>
+        <CCode txt={'track of personal software projects,'} color={ccode.white}/>
+        <CCode txt={'using local file saves and integrated'} color={ccode.white}/>
+        <CCode txt={'with Git'} color={ccode.white}/>
+      </div>
       {TerminalWindow(
         <div style={{ display: 'flex', flexDirection: 'column'}}>
           <div>
