@@ -1,6 +1,6 @@
-import { ContentScaffold } from '../cmp/Components'
+import { ContentScaffold } from '../../cmp/Components'
 
-function Portfolio() {
+function ZardsTrackerProject() {
   return (
     <ContentScaffold content={
       <div>
@@ -14,9 +14,9 @@ function Portfolio() {
           }}>Coming soon!</pre>
       </div>
     }
-    txt={'Home'}
-    route={'/'}/>
+    txt={'Projects'}
+    route={'/projects'}/>
   )
 }
 
-export default Portfolio
+export default ZardsTrackerProject

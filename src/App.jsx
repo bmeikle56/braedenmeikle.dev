@@ -7,6 +7,7 @@ import ActionPlayerProject from './proj/action-player/ActionPlayerProject.jsx'
 import PremiumSwiftProject from './proj/premium-swift/PremiumSwiftProject.jsx'
 import BZDevProject from './proj/bz-dev/BZDevProject.jsx'
 import Portfolio from './pages/Portfolio.jsx'
+import ZardsTrackerProject from './proj/zards-tracker/ZardsTrackerProject.jsx'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/projects/action-player' element={<ActionPlayerProject/>}/>
         <Route path='/projects/bz-dev' element={<BZDevProject/>}/>
         <Route path='/projects/premium-swift' element={<PremiumSwiftProject/>}/>
+        <Route path='/projects/zards-tracker' element={<ZardsTrackerProject/>}/>
       </Routes>
     </Router>
   )
