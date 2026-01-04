@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export function useLoading(duration = 2700) {
+export function useLoading(duration = 2000) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
