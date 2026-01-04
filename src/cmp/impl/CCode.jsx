@@ -16,7 +16,7 @@ const ccode = {
 
 /// Colored code shared component
 /// Callee will need to wrap the components
-/// in a div with style 'block
+/// in a div with style block
 ///
 function CCode({ txt, color }) {
   return (

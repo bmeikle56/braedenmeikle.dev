@@ -1,6 +1,4 @@
-import Video from '../cmp/Video'
-
-import { ContentScaffold } from '../../../../cmp/Components'
+import { Video, ContentScaffold } from "../../cmp/Components"
 
 function BulletPoint({ txt }) {
   return (
@@ -26,7 +24,7 @@ function ActionPlayerContent() {
   )
 }
 
-function ActionPlayerHome() {
+function ActionPlayerProject() {
   return (
     <ContentScaffold
     content={ ActionPlayerContent() }
@@ -36,4 +34,4 @@ function ActionPlayerHome() {
   )
 }
 
-export default ActionPlayerHome
+export default ActionPlayerProject

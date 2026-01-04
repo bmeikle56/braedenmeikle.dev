@@ -1,7 +1,4 @@
-import ErrorMessage from '../cmp/ErrorMessage'
-import Title from '../cmp/Title'
-
-import { ContentScaffold } from '../../../../cmp/Components'
+import { ContentScaffold, ErrorMessage } from '../../cmp/Components'
 
 let palette = {
   white: 'rgb(255,255,255)',
@@ -73,10 +70,23 @@ function CallFunction({ suit, rank }) {
   )
 }
 
+function PremiumSwiftTitle() {
+  return (
+    <pre style={{
+      fontSize: '24px',
+      color: 'rgb(174, 0, 255)',
+      background: 'rgb(13,13,13)', 
+      padding: 20,
+      textShadow: '0 0 12px rgb(155,155,155)',
+      borderRadius: 20
+    }}>{'<PremiumSwift/>'}</pre>
+  )
+}
+
 function PremiumSwiftContent() {
   return (
       <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', maxWidth: '400px', width: '75vw', whiteSpace: 'pre-wrap', padding: 0}}>
-      <Title/>
+      <PremiumSwiftTitle/>
       <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', width: '100%'}}>
         <Comments/>
         <div style={{display: 'flex'}}>
@@ -190,7 +200,7 @@ function PremiumSwiftContent() {
   )
 }
 
-function PremiumSwiftHome() {
+function PremiumSwiftProject() {
   return (
     <ContentScaffold 
     content={ PremiumSwiftContent() }
@@ -200,4 +210,4 @@ function PremiumSwiftHome() {
   )
 }
 
-export default PremiumSwiftHome
+export default PremiumSwiftProject
