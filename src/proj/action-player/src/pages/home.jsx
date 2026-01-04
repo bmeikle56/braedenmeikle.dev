@@ -1,23 +1,27 @@
-import Diamond from '../cmp/Diamond'
-import ActionPlayerTitle from '../cmp/Title'
 import Video from '../cmp/Video'
-import DownloadButton from '../cmp/DownloadButton'
 
 import { ContentScaffold } from '../../../../cmp/Components'
 
+function BulletPoint({ txt }) {
+  return (
+    <pre style={{whiteSpace: 'pre-wrap', color: 'rgb(150,150,150)', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 0, margin: 0}}>
+      <div style={{background: 'rgb(50,50,50)', width: 8, height: 8, borderRadius: '50%', marginRight: 8}}/>
+      {txt}
+    </pre>
+  )
+}
+
+
 function ActionPlayerContent() {
   return (
-    <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', width: '700px', height: '100vh'}}>
-      <div className='title-view' style={{display: 'flex', justifyContent: 'center', alignItems:'center', background: 'black', padding: '0 30px 0 30px', borderRadius: 20, marginTop: 50}}>
-        <Diamond/>
-        <ActionPlayerTitle/>
-      </div>
-      <div style={{height: '10vh'}}/>
+    <div id='action-player-content' style={{display: 'flex', justifyContent: 'center', alignItems:'center', width: '700px', height: '100vh', gap: 80}}>
       <Video device={'iPhone'}/>
-      <div style={{height: 40}}/>
-      <a href='/dwnld/ActionPlayer.zip'>
-        <pre style={{color: 'rgb(12,123,0)', padding: 12, background: 'black', borderRadius: 10}}>ActionPlayer.zip</pre>
-      </a>
+      <div style={{background: 'rgb(10,10,10)', width: '250px', height: 'fit-content', borderRadius: 12, padding: 20, display: 'flex', justifyContent: 'center', alignItems: 'flex-start', flexDirection: 'column', gap: 8}}>
+        <BulletPoint txt={'MVVM Architecture with modern use of property wrappers'}/>
+        <BulletPoint txt={'SwiftUI declarative views + UIKit navigation library'}/>
+        <BulletPoint txt={'ChatGPT latest model analysis in real-time'}/>
+        <BulletPoint txt={'Go backend optimized for speed + reliability'}/>
+      </div>
     </div>
   )
 }

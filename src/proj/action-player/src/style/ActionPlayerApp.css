@@ -45,6 +45,10 @@ a, a:visited, a:hover, a:active {
 }
 
 @media (max-width: 600px) {
+  #action-player-content {
+    flex-direction: column;
+  }
+
   .diamond-icon {
     width: 24px;
     height: 40px;
