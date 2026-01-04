@@ -1,5 +1,6 @@
 import BackButton from './impl/BackButton'
 import Cells from './impl/Cells'
+import ErrorMessage from './impl/ErrorMessage'
 import Footer from './impl/Footer'
 import Fun from './impl/Fun'
 import Loading from './impl/Loading'
@@ -13,6 +14,7 @@ export {
   BackButton,
   Cells,
   ContentScaffold,
+  ErrorMessage,
   ExpandingHDiv,
   Footer,
   Fun,

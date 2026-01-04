@@ -4,8 +4,8 @@ import Home from './pages/Home'
 import Projects from './pages/Projects'
 
 import ActionPlayerProject from './proj/action-player/ActionPlayerProject.jsx'
+import PremiumSwiftProject from './proj/premium-swift/PremiumSwiftProject.jsx'
 import BZDevApp from './../src/proj/bz-dev/src/BZDevApp.jsx'
-import PremiumSwiftApp from './../src/proj/premium-swift/src/PremiumSwiftApp.jsx'
 import Portfolio from './pages/Portfolio.jsx'
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route path='/projects' element={<Projects/>}/>
         <Route path='/projects/action-player' element={<ActionPlayerProject/>}/>
         <Route path='/projects/bz-dev/*' element={<BZDevApp/>}/>
-        <Route path='/projects/premium-swift/*' element={<PremiumSwiftApp/>}/>
+        <Route path='/projects/premium-swift' element={<PremiumSwiftProject/>}/>
       </Routes>
     </Router>
   )
