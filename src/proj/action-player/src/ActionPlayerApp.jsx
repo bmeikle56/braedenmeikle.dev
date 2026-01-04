@@ -1,15 +1,15 @@
-import { Routes, Route } from 'react-router-dom'
+// import { Routes, Route } from 'react-router-dom'
 
-import './style/ActionPlayerApp.css'
+// import './style/ActionPlayerApp.css'
 
-import ActionPlayerHome from './pages/home'
+// import ActionPlayerHome from './pages/home'
 
-function ActionPlayerApp() {
-  return (
-    <Routes>
-      <Route index element={<ActionPlayerHome/>} />
-    </Routes>
-  )
-}
+// function ActionPlayerApp() {
+//   return (
+//     <Routes>
+//       <Route index element={<ActionPlayerHome/>} />
+//     </Routes>
+//   )
+// }
 
-export default ActionPlayerApp
+// export default ActionPlayerApp

@@ -7,6 +7,7 @@ import ProjectButton from './impl/ProjectButton'
 import Wallpaper from './impl/Wallpaper'
 import { VDiv, HDiv, ExpandingHDiv } from './impl/GeometricDiv'
 import ContentScaffold from './impl/ContentScaffold'
+import Video from './impl/Video'
 
 export {
   BackButton,
@@ -19,5 +20,6 @@ export {
   Loading,
   ProjectButton,
   VDiv,
+  Video,
   Wallpaper
 }
