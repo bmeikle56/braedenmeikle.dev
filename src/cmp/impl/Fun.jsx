@@ -17,7 +17,7 @@ function Title() {
 
 function ActivityTracker() {
   const activity = [
-    [1,1,0,1,0,0,0,0,0,0],
+    [1,1,0,1,0,0,1,0,0,0],
     [0,0,0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,0,0,0],
     [0]
@@ -216,7 +216,7 @@ function Fun() {
             <Circle/>
           </div>
           <VDiv height={30}/>
-          <p style={{color: 'rgb(12,123,0)', textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>Washington, DC</p>
+          <pre style={{color: 'rgb(12,123,0)', textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>Washington, DC</pre>
         </div>
         
         {/* <Cells/> */}
