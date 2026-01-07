@@ -64,7 +64,9 @@ function ActivityTracker() {
       <div style={{display: 'flex', justifyContent: 'center'}}>
         <Pfp/>
       </div>
+      <div style={{padding: '0 4px 0 4px'}}>
       <VDiv height={72}/>
+      </div>
       <div style={{display: 'flex', flexDirection: 'column', gap: '12px', justifyContent: 'center', alignItems: 'center'}}>
         <div style={{display: 'grid', justifyContent: 'center', gap: '2px'}}>
           {activity.map((row, i) =>
@@ -197,6 +199,8 @@ function Fun() {
           <HDiv width={230}/>
         </div>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+          <pre style={{color: 'rgb(12,123,0)', textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>Washington, DC</pre>
+          <VDiv height={30}/>
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(8, 1fr)', gridTemplateRows: 'repeat(2, 1fr)', gap: '4px', width: 'fit-content'}}>
             <Circle/>
             <Circle/>
@@ -215,8 +219,6 @@ function Fun() {
             <Circle/>
             <Circle/>
           </div>
-          <VDiv height={30}/>
-          <pre style={{color: 'rgb(12,123,0)', textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>Washington, DC</pre>
         </div>
         
         {/* <Cells/> */}
