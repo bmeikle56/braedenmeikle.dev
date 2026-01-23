@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { darkGray, superDarkGray, onlineGreen } from '../../styles/colors'
 import FavoriteSongs from './Cells'
-import { VDiv, HDiv, ExpandingHDiv } from './GeometricDiv'
+import { VDiv, HDiv } from './GeometricDiv'
 
 function Title() { 
   const style = {
@@ -18,7 +18,7 @@ function Title() {
 function ActivityTracker() {
   const activity = [
     [1,1,0,1,0,0,1,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
+    [0,0,1,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,0,0,0],
     [0]
   ]
