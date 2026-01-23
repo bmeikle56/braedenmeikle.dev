@@ -102,47 +102,56 @@ function Goals() {
 //   )
 // }
 
+function IPhone() {
+  return (
+    <div style={{
+      background: 'black',
+      border: 'rgb(12,123,0)',
+      boxShadow: '0px 0px 8px rgb(12,123,0), 0px 0px 4px rgb(12,123,0)',
+      width: 48,
+      height: 96,
+      borderRadius: 12,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}>
+      <BouncingLines/>
+    </div>
+  )
+}
 
 function FavoriteSongs() {
-  const songMetas = [
-    {
-      song: 'Freedom',
-      artist: 'Oliver Heldens'
-    },
-    {
-      song: 'No Charge',
-      artist: 'Future'
-    }
-  ]
-
   function FavoriteSong({ meta }) {
     return (
-      // <div>
-        
-        <div style={{display: 'flex', width: '100%', justifyContent: 'space-between', alignItems:'center'}}>
-          <p style={{color: 'rgb(12,123,0)', textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>{meta.song}</p>
-          <p style={{whiteSpace: 'nowrap', color: 'rgb(12,123,0)', paddingRight: 10, textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>{meta.artist}</p>
-        </div>
-      // </div>
+      <div style={{display: 'flex'}}>
+        <pre style={{whiteSpace: 'nowrap', padding: '0 8px 0 0', color: 'rgb(45,45,45)'}}>{'<'}</pre>
+        <pre style={{whiteSpace: 'nowrap', padding: 0, color: 'rgb(12,123,0)', textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>{meta.artist}</pre>
+        <pre style={{whiteSpace: 'nowrap', padding: '0 0 0 8px', color: 'rgb(45,45,45)'}}>{'/>'}</pre>
+      </div>
     )
   }
 
   return (<div style={{display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'space-between'}}>
-    <div style={{display: 'flex', flexDirection:'column', gap: 30}}>
+    {/* <div style={{display: 'flex', flexDirection:'column', gap: 30}}>
       <BouncingLines/>
       <BouncingLines/>
+    </div> */}
+    <IPhone/>
+    <div style={{padding: '0 8px 0 0px'}}>
+      <VDiv height={96}/>
     </div>
-    <div style={{padding: '0 14px 0 14px'}}>
-      <VDiv height={72}/>
-    </div>
-    <div style={{display: 'flex', flexDirection:'column', width: '100%', gap: 0}}>
+    <div style={{display: 'flex', flexDirection:'column', alignItems: 'center', gap: 0}}>
       <FavoriteSong meta={{
         song: 'Freedom',
         artist: 'Oliver Heldens'
       }}/>
       <FavoriteSong meta={{
-        song: 'No Charge',
-        artist: 'Future'
+        song: 'Glimmer In The Dark',
+        artist: 'Trilucid'
+      }}/>
+      <FavoriteSong meta={{
+        song: 'Got Damn',
+        artist: 'Gunna'
       }}/>
     </div>
     

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useLoading } from '../../hooks/useLoading'
 
-import { BackButton, Loading, Wallpaper } from '../Components'
+import { BackButton, Loading, LoadingHeadphones, Wallpaper } from '../Components'
 
 function ContentScaffold({ content, txt, route }) {
   const isLoading = useLoading()
@@ -9,7 +9,7 @@ function ContentScaffold({ content, txt, route }) {
   return (
     <>
       {isLoading ? (
-        <Loading />
+        <LoadingHeadphones />
       ) : (
         <motion.div
         initial={{ opacity: 0 }}

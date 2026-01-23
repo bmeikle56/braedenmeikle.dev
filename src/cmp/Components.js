@@ -12,6 +12,7 @@ import Video from './impl/Video'
 import { ccode, CCode, BZCCode } from './impl/CCode'
 import { Spacer } from './impl/Spacer'
 import { BZtxt, Inlinetxt } from './impl/BZtxt'
+import LoadingHeadphones from './impl/LoadingHeadphones'
 
 export {
   BackButton,
@@ -28,6 +29,7 @@ export {
   HDiv,
   Inlinetxt,
   Loading,
+  LoadingHeadphones,
   ProjectButton,
   Spacer,
   VDiv,
