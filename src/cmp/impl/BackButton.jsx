@@ -1,19 +1,19 @@
 import { useNavigate } from 'react-router-dom'
 
-function BackButton({ txt, route }) {
+function BackButton({ txt, route, theme }) {
   const navigate = useNavigate()
 
   return (
     <button style={{
       display: 'flex',
-      color: 'rgb(12,123,0)',
+      color: theme,
       fontSize: 12,
       background: 'black',
       border: 'none',
       borderRadius: 8,
       padding: '6px 10px 6px 10px',
       margin: '15px 0 0 15px',
-      textShadow: `0 0 6px rgb(12,123,0), 0 0 6px rgb(12,123,0), 0 0 6px rgb(12,123,0)`
+      textShadow: `0 0 6px ${theme}, 0 0 6px ${theme}, 0 0 6px ${theme}`
     }}
     onClick={() => navigate(route)}
     >

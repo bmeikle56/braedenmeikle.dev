@@ -10,10 +10,15 @@ const onlineGreen = 'rgb(0,192,0)'
 // special color for the site
 const specialColor = 'rgb(0, 255, 255)'
 
+const purpleTheme = 'rgb(185,0,185)'
+const greenTheme = 'rgb(12,123,0)'
+
 export { 
   darkGray, 
   txtCol, 
   onlineGreen,
   specialColor, 
   superDarkGray,
+  purpleTheme,
+  greenTheme
 }

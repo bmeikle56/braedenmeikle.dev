@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
-const color = 'rgb(185,0,185)'
 
-function SpeakerBox({ delay }) {
+
+function SpeakerBox({ theme, delay }) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -13,11 +13,11 @@ function SpeakerBox({ delay }) {
       <div style={{display: 'flex'}}>
           <div
             style={{
-              backgroundColor: color,
+              backgroundColor: theme,
               width: 24,
               height: 24,
               borderRadius: 6,
-              boxShadow: `0px 0px 15px ${color}`
+              boxShadow: `0px 0px 15px ${theme}, 0px 0px 12px ${theme}, 0px 0px 15px ${theme}`
             }}
           />
       </div>
@@ -25,7 +25,7 @@ function SpeakerBox({ delay }) {
   )
 }
 
-function LoadingBoxes() {
+function LoadingBoxes({ theme }) {
   return (
     <motion.div
       style={{
@@ -40,15 +40,15 @@ function LoadingBoxes() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      <SpeakerBox delay={0}/>
-      <SpeakerBox delay={0.25}/>
-      <SpeakerBox delay={0.5}/>
-      <SpeakerBox delay={0.75}/>
+      <SpeakerBox theme={theme} delay={0}/>
+      <SpeakerBox theme={theme} delay={0.25}/>
+      <SpeakerBox theme={theme} delay={0.5}/>
+      <SpeakerBox theme={theme} delay={0.75}/>
     </motion.div>
   )
 }
 
-function ByteTransfer() {
+function ByteTransfer({ theme }) {
   const preRef = useRef(null)
 
   useEffect(() => {
@@ -71,16 +71,15 @@ function ByteTransfer() {
       <pre
         ref={preRef}
         style={{
-          color: 'rgb(12,123,0)',
-          textShadow:
-            '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)',
+          color: theme,
+          textShadow: `0px 0px 15px ${theme}, 0px 0px 12px ${theme}, 0px 0px 15px ${theme}`,
         }}
       />
     </motion.div>
   )
 }
 
-function LoadingBits() {
+function LoadingBits({ theme }) {
   return (
     <motion.div
       style={{
@@ -94,9 +93,8 @@ function LoadingBits() {
       }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      // transition={{ duration: 1.5 }}
     >
-      <ByteTransfer />
+      <ByteTransfer theme={theme}/>
     </motion.div>
   )
 }
