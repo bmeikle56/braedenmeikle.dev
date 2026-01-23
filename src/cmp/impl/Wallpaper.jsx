@@ -1,7 +1,8 @@
 import '../../styles/global.css'
 import { useState, useEffect } from 'react'
+import { greenTheme } from '../../styles/colors'
 
-function Wallpaper() {
+function Wallpaper({ theme = greenTheme }) {
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 })
   const squareSize = 10
 
@@ -37,11 +38,20 @@ function Wallpaper() {
         }}
       >
         {Array.from({ length: total }).map((_, i) => {
-          const isGreen = Math.floor(Math.random() * 8) === 0
+          const hasColor = Math.floor(Math.random() * 8) === 0
           const greenShades = ['rgb(0,15,0)', 'rgb(0,30,0)', 'rgb(0,45,0)']
-          const color = isGreen
-            ? greenShades[Math.floor(Math.random() * greenShades.length)]
-            : 'black'
+          const purpleShades = ['rgb(15,0,15)', 'rgb(30,0,30)', 'rgb(45,0,45)']
+
+          let color
+          if (hasColor) {
+            if (theme === greenTheme) {
+              color = greenShades[Math.floor(Math.random() * greenShades.length)]
+            } else {
+              color = purpleShades[Math.floor(Math.random() * purpleShades.length)]
+            }
+          } else {
+            color = 'black'
+          }
 
           return (
             <div

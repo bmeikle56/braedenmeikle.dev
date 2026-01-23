@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useLoading } from '../hooks/useLoading'
-import { Footer, Fun, Loading, Wallpaper } from '../cmp/Components'
+import { Footer, Fun, LoadingBits, Wallpaper } from '../cmp/Components'
+import { greenTheme } from '../styles/colors'
 
 function Home() {
   const isLoading = useLoading()
@@ -8,14 +9,14 @@ function Home() {
   return (
     <>
       {isLoading ? (
-        <Loading />
+        <LoadingBits theme={greenTheme}/>
       ) : (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.25 }}
         >
-          <Wallpaper />
+          <Wallpaper/>
           <Fun />
           <Footer />
         </motion.div>

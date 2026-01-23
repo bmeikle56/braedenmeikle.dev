@@ -1,17 +1,20 @@
 import { ContentScaffold, ProjectButton } from '../cmp/Components'
+import { purpleTheme } from '../styles/colors'
 
 function Projects() {
   return (
     <ContentScaffold content={
       <div>
-        <ProjectButton txt={'actionplayer.app'} route={'/projects/action-player'}/>
-        <ProjectButton txt={'berzerkagile.dev'} route={'/projects/bz-dev'}/>
-        <ProjectButton txt={'premiumswift.dev'} route={'/projects/premium-swift'}/>
-        <ProjectButton txt={'zardstracker.app'} route={'/projects/zards-tracker'}/>
+        <ProjectButton theme={purpleTheme} txt={'actionplayer.app'} route={'/projects/action-player'}/>
+        <ProjectButton theme={purpleTheme} txt={'berzerkagile.dev'} route={'/projects/bz-dev'}/>
+        <ProjectButton theme={purpleTheme} txt={'premiumswift.dev'} route={'/projects/premium-swift'}/>
+        <ProjectButton theme={purpleTheme} txt={'zardstracker.app'} route={'/projects/zards-tracker'}/>
       </div>
     }
     txt={'Home'}
-    route={'/'}/>
+    route={'/'}
+    theme={purpleTheme}
+    useBits={false}/>
   )
 }
 

@@ -3,7 +3,6 @@ import Cells from './impl/Cells'
 import ErrorMessage from './impl/ErrorMessage'
 import Footer from './impl/Footer'
 import Fun from './impl/Fun'
-import Loading from './impl/Loading'
 import ProjectButton from './impl/ProjectButton'
 import Wallpaper from './impl/Wallpaper'
 import { VDiv, HDiv, ExpandingHDiv } from './impl/GeometricDiv'
@@ -12,7 +11,7 @@ import Video from './impl/Video'
 import { ccode, CCode, BZCCode } from './impl/CCode'
 import { Spacer } from './impl/Spacer'
 import { BZtxt, Inlinetxt } from './impl/BZtxt'
-import LoadingHeadphones from './impl/LoadingHeadphones'
+import { LoadingBits, LoadingBoxes } from './impl/LoadingAnims'
 
 export {
   BackButton,
@@ -28,8 +27,8 @@ export {
   Fun,
   HDiv,
   Inlinetxt,
-  Loading,
-  LoadingHeadphones,
+  LoadingBits,
+  LoadingBoxes,
   ProjectButton,
   Spacer,
   VDiv,
