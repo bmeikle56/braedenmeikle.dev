@@ -1,10 +1,18 @@
 import { motion } from 'framer-motion'
 import { useLoading } from '../../hooks/useLoading'
 
-import { BackButton, Loading, LoadingHeadphones, Wallpaper } from '../Components'
+import { BackButton, LoadingBits, LoadingBoxes, Wallpaper } from '../Components'
 
-function ContentScaffold({ content, txt, route }) {
+function ContentScaffold({ content, txt, route, useBits = true }) {
   const isLoading = useLoading()
+
+  if (isLoading) {
+    if (useBits) {
+      return <LoadingBits />
+    } else {
+      return <LoadingBoxes />
+    }
+  } 
 
   return (
     <>

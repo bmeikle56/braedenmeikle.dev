@@ -1,6 +1,53 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
+const color = 'rgb(185,0,185)'
+
+function SpeakerBox({ delay }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: [0, 1, 0] }}
+      transition={{ duration: 1.5, delay: delay }}
+    >
+      <div style={{display: 'flex'}}>
+          <div
+            style={{
+              backgroundColor: color,
+              width: 24,
+              height: 24,
+              borderRadius: 6,
+              boxShadow: `0px 0px 15px ${color}`
+            }}
+          />
+      </div>
+    </motion.div>
+  )
+}
+
+function LoadingBoxes() {
+  return (
+    <motion.div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: 'auto',
+        flexDirection: 'row',
+        gap: '12px',
+        height: '100vh',
+      }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      <SpeakerBox delay={0}/>
+      <SpeakerBox delay={0.25}/>
+      <SpeakerBox delay={0.5}/>
+      <SpeakerBox delay={0.75}/>
+    </motion.div>
+  )
+}
+
 function ByteTransfer() {
   const preRef = useRef(null)
 
@@ -33,7 +80,7 @@ function ByteTransfer() {
   )
 }
 
-function Loading() {
+function LoadingBits() {
   return (
     <motion.div
       style={{
@@ -54,4 +101,5 @@ function Loading() {
   )
 }
 
-export default Loading
+
+export { LoadingBits, LoadingBoxes }

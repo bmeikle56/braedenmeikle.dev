@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useLoading } from '../hooks/useLoading'
-import { Footer, Fun, Loading, Wallpaper } from '../cmp/Components'
+import { Footer, Fun, LoadingBits, Wallpaper } from '../cmp/Components'
 
 function Home() {
   const isLoading = useLoading()
@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       {isLoading ? (
-        <Loading />
+        <LoadingBits />
       ) : (
         <motion.div
           initial={{ opacity: 0 }}

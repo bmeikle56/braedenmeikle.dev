@@ -11,7 +11,8 @@ function Projects() {
       </div>
     }
     txt={'Home'}
-    route={'/'}/>
+    route={'/'}
+    useBits={false}/>
   )
 }
 
