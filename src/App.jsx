@@ -26,3 +26,56 @@ function App() {
 }
 
 export default App
+
+// *** LinkedIn banner app ***
+
+// import LinkedInBanner from './pages/LinkedInBanner';
+// import { toPng } from 'html-to-image';
+
+// export default function App() {
+//   const downloadBanner = () => {
+//     const node = document.getElementById("banner");
+//     toPng(document.getElementById("banner"), {
+//       pixelRatio: 4,
+//       width: 1584,
+//       height: 396
+//     }).then(dataUrl => {
+//       const link = document.createElement("a");
+//       link.download = "linkedin-banner.png";
+//       link.href = dataUrl;
+//       link.click();
+//     });
+
+//   };
+
+//   const words = ['coder', 'thinker', 'learner'];
+
+//   return (
+//     <div style={{ padding: 40 }}>
+//       <LinkedInBanner>
+//       <div style={{background: 'black', width: 'fit-content', marginRight: 320, padding: 12, borderRadius: 12}}>
+//         {words.map(word => (
+//           <div key={word} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 4, paddingTop: 6, paddingBottom: 6 }}>
+//             <span style={{ color: 'rgb(40,40,40)', fontSize: 24, }}>{'<'}</span>
+//             <span
+//               style={{
+//                 color: 'rgb(20,200,0)',
+//                 fontSize: 24,
+//                 fontFamily: 'monospace',
+//                 // filter: 'drop-shadow(0 0 5px rgb(15,150,0)) drop-shadow(0 0 8px rgb(15,150,0)) drop-shadow(0 0 12px rgb(15,150,0))',
+//               }}
+//             >
+//               {word}
+//             </span>
+//             <span style={{ color: 'rgb(40,40,40)', fontSize: 24, }}>{'/>'}</span>
+//           </div>
+//         ))}
+//         </div>
+//       </LinkedInBanner>
+
+//       <button onClick={downloadBanner} style={{ marginTop: 20 }}>
+//         Download Banner
+//       </button>
+//     </div>
+//   );
+// }

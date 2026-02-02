@@ -19,8 +19,7 @@ function ActivityTracker() {
   const activity = [
     [0,1,0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0]
+    [0,0,0,0,0,0,0,0],
   ]
 
   function currentDayActivity() {
