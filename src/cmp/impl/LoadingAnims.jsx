@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
-
-
 function SpeakerBox({ theme, delay }) {
   return (
     <motion.div

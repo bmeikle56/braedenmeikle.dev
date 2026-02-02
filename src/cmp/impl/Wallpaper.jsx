@@ -40,15 +40,10 @@ function Wallpaper({ theme = greenTheme }) {
         {Array.from({ length: total }).map((_, i) => {
           const hasColor = Math.floor(Math.random() * 8) === 0
           const greenShades = ['rgb(0,15,0)', 'rgb(0,30,0)', 'rgb(0,45,0)']
-          const purpleShades = ['rgb(15,0,15)', 'rgb(30,0,30)', 'rgb(45,0,45)']
 
           let color
           if (hasColor) {
-            if (theme === greenTheme) {
-              color = greenShades[Math.floor(Math.random() * greenShades.length)]
-            } else {
-              color = purpleShades[Math.floor(Math.random() * purpleShades.length)]
-            }
+            color = greenShades[Math.floor(Math.random() * greenShades.length)]
           } else {
             color = 'black'
           }
