@@ -17,8 +17,8 @@ function Home() {
           transition={{ delay: 0.25 }}
         >
           <Wallpaper/>
-          <Fun />
-          <Footer />
+          <Fun theme={greenTheme}/>
+          <Footer theme={greenTheme}/>
         </motion.div>
       )}
     </>

@@ -1,8 +1,7 @@
 import '../../styles/global.css'
 import { useState, useEffect } from 'react'
-import { greenTheme } from '../../styles/colors'
 
-function Wallpaper({ theme = greenTheme }) {
+function Wallpaper() {
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 })
   const squareSize = 10
 

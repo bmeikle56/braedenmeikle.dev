@@ -10,7 +10,7 @@ const onlineGreen = 'rgb(0,192,0)'
 // special color for the site
 const specialColor = 'rgb(0, 255, 255)'
 
-const greenTheme = 'rgb(12,123,0)'
+const greenTheme = 'rgb(20,200,0)'
 
 export { 
   darkGray, 

@@ -1,6 +1,6 @@
 import { ContentScaffold } from '../../cmp/Components'
 
-function ZardsTrackerProject() {
+function ZardsTrackerProject({ theme }) {
   return (
     <ContentScaffold content={
       <div>
@@ -9,8 +9,8 @@ function ZardsTrackerProject() {
           padding: 20,
           borderRadius: 12,
           background: 'black',
-          color: 'rgb(12,123,0)',
-          textShadow: `0 0 5px rgb(12,123,0), 0 0 12px rgb(12,123,0), 0 0 15px rgb(12,123,0)`
+          color: theme,
+          textShadow: `0 0 5px ${theme}, 0 0 12px ${theme}, 0 0 15px ${theme}`
           }}>Coming soon!</pre>
       </div>
     }

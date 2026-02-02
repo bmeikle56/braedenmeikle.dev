@@ -3,13 +3,13 @@ import { darkGray, superDarkGray, onlineGreen } from '../../styles/colors'
 import FavoriteSongs from './Cells'
 import { VDiv, HDiv } from './GeometricDiv'
 
-function Title() { 
+function Title({ theme }) { 
   const style = {
     fontSize: '28px',
     paddingBottom: '0px',
     textAlign: 'center',
-    color: 'rgb(12,123,0)',
-    textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'
+    color: theme,
+    textShadow: `0px 0px 15px ${theme}, 0px 0px 12px ${theme}, 0px 0px 15px ${theme}`
   }
 
   return <pre style={style}>braeden meikle</pre> 
@@ -158,7 +158,7 @@ function Pfp() {
 //   )
 // }
 
-function Circle() {
+function Circle({ theme }) {
   return (
     <motion.div
     initial={{ opacity: 0 }}
@@ -168,17 +168,17 @@ function Circle() {
       height: 8, 
       width: 8, 
       borderRadius: '50%', 
-      color: 'rgb(12,123,0)', 
-      boxShadow: '0px 0px 8px rgb(12,123,0), 0px 0px 4px rgb(12,123,0)'
+      color: theme, 
+      boxShadow: `0px 0px 8px ${theme}, 0px 0px 4px ${theme}`
     }}/>
   )
 }
   
-function Fun() { 
+function Fun({ theme }) { 
   return (
     <div id='fun' style={{zIndex: 1, position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
       <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', background: 'black', height: 'fit-content', paddingBottom: 30, paddingRight: 25, paddingLeft: 25, borderRadius: 16}}>
-        <Title/>
+        <Title theme={theme}/>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', paddingBottom: '32px'}}>
           <HDiv width={230}/>
         </div>
@@ -193,30 +193,30 @@ function Fun() {
             <OmahaHandOfTheDay/>
           </div>
         </div> */}
-        <FavoriteSongs/>
+        <FavoriteSongs theme={theme}/>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '32px 0 20px 0'}}>
           <HDiv width={230}/>
         </div>
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-          <pre style={{color: 'rgb(12,123,0)', textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>Washington, DC</pre>
+          <pre style={{color: theme, textShadow: `0px 0px 15px ${theme}, 0px 0px 12px ${theme}, 0px 0px 15px ${theme}`}}>Washington, DC</pre>
           <VDiv height={30}/>
           <div style={{display: 'grid', gridTemplateColumns: 'repeat(8, 1fr)', gridTemplateRows: 'repeat(2, 1fr)', gap: '4px', width: 'fit-content'}}>
-            <Circle/>
-            <Circle/>
-            <Circle/>
-            <Circle/>
-            <Circle/>
-            <Circle/>
-            <Circle/>
-            <Circle/>
-            <Circle/>
-            <Circle/>
-            <Circle/>
-            <Circle/>
-            <Circle/>
-            <Circle/>
-            <Circle/>
-            <Circle/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
+            <Circle theme={theme}/>
           </div>
         </div>
         

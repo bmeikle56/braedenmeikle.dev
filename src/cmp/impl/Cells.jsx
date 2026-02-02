@@ -19,7 +19,7 @@ function Cell({ content }) {
   </div> 
 }
 
-function BouncingLines() {
+function BouncingLines({ theme }) {
   const heights = [
     [`${50}%`, `${80}%`, `${50}%`], 
     [`${54}%`, `${90}%`, `${54}%`], 
@@ -31,8 +31,8 @@ function BouncingLines() {
   function BouncingLine({ height, dur }) {
     const barStyle = {
       width: '1px',
-      backgroundColor: 'rgb(12,123,0)',
-      boxShadow: '0px 0px 5px rgb(12,123,0), 0px 0px 5px rgb(12,123,0), 0px 0px 5px rgb(12,123,0)'
+      backgroundColor: theme,
+      boxShadow: `0px 0px 5px ${theme}, 0px 0px 5px ${theme}, 0px 0px 5px ${theme}`
     }
 
     return (
@@ -102,12 +102,12 @@ function Goals() {
 //   )
 // }
 
-function IPhone() {
+function IPhone({ theme }) {
   return (
     <div style={{
       background: 'black',
-      border: 'rgb(12,123,0)',
-      boxShadow: '0px 0px 8px rgb(12,123,0), 0px 0px 4px rgb(12,123,0)',
+      border: theme,
+      boxShadow: `0px 0px 8px ${theme}, 0px 0px 4px ${theme}`,
       width: 48,
       height: 96,
       borderRadius: 12,
@@ -115,17 +115,17 @@ function IPhone() {
       justifyContent: 'center',
       alignItems: 'center'
     }}>
-      <BouncingLines/>
+      <BouncingLines theme={theme}/>
     </div>
   )
 }
 
-function FavoriteSongs() {
+function FavoriteSongs({ theme }) {
   function FavoriteSong({ meta }) {
     return (
       <div style={{display: 'flex'}}>
         <pre style={{whiteSpace: 'nowrap', padding: '0 8px 0 0', color: 'rgb(45,45,45)'}}>{'<'}</pre>
-        <pre style={{whiteSpace: 'nowrap', padding: 0, color: 'rgb(12,123,0)', textShadow: '0px 0px 15px rgb(12,123,0), 0px 0px 12px rgb(12,123,0), 0px 0px 15px rgb(12,123,0)'}}>{meta.artist}</pre>
+        <pre style={{whiteSpace: 'nowrap', padding: 0, color: theme, textShadow: `0px 0px 15px ${theme}, 0px 0px 12px ${theme}, 0px 0px 15px ${theme}`}}>{meta.artist}</pre>
         <pre style={{whiteSpace: 'nowrap', padding: '0 0 0 8px', color: 'rgb(45,45,45)'}}>{'/>'}</pre>
       </div>
     )
@@ -136,7 +136,7 @@ function FavoriteSongs() {
       <BouncingLines/>
       <BouncingLines/>
     </div> */}
-    <IPhone/>
+    <IPhone theme={theme}/>
     <div style={{padding: '0 8px 0 0px'}}>
       <VDiv height={96}/>
     </div>
