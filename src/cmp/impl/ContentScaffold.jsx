@@ -12,7 +12,11 @@ function ContentScaffold({ content, txt, route, theme = greenTheme, useBits = tr
   }
 
   return (
-    <>
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.25 }}
+    >
       {/* fixed position wallpapper */}
       <div
       style={{
@@ -39,10 +43,7 @@ function ContentScaffold({ content, txt, route, theme = greenTheme, useBits = tr
       />
 
       {/* scrollable content layer */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.25 }}
+      <div
         style={{
           position: 'relative',
           zIndex: 1,
@@ -66,8 +67,8 @@ function ContentScaffold({ content, txt, route, theme = greenTheme, useBits = tr
         >
           {content}
         </div>
-      </motion.div>
-    </>
+      </div>
+    </motion.div>
   )
 }
 
