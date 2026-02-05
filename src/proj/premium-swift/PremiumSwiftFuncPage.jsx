@@ -70,6 +70,152 @@ function CallFunction({ suit, rank }) {
   )
 }
 
+function SwiftTitle() {
+  return (
+    <pre style={{
+      fontSize: '24px',
+      color: 'rgb(50,50,50)',
+      background: 'rgb(13,13,13)', 
+      padding: 20,
+      // textShadow: '0 0 12px rgb(155,155,155)',
+      borderRadius: 20
+    }}>{'<Swift/>'}</pre>
+  )
+}
+
+function SwiftFunc() {
+  return (
+      <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', maxWidth: '400px', width: '75vw', whiteSpace: 'pre-wrap', padding: 0}}>
+      <SwiftTitle/>
+      <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', width: '100%'}}>
+        <div style={{display: 'flex'}}>
+          <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>struct</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.cyan, display: 'inline', padding: 0, margin: 0}}>Card</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'{'}</pre>
+        </div>
+        <div style={{display: 'flex'}}>
+          <div style={{width: 30, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>{'let'}</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.fadedBlue, display: 'inline', padding: 0, margin: 0}}>{'suit'}</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{':'}</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.deepBlue, display: 'inline', padding: 0, margin: 0}}>{'String'}</pre>
+        </div>
+        <div style={{display: 'flex'}}>
+          <div style={{width: 30, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>{'let'}</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.fadedBlue, display: 'inline', padding: 0, margin: 0}}>{'rank'}</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{':'}</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.deepBlue, display: 'inline', padding: 0, margin: 0}}>{'Int'}</pre>
+        </div>
+        <div style={{display: 'flex'}}>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'}'}</pre>
+        </div>
+        <div style={{display: 'flex'}}>
+          <div style={{height: 24, padding: 0, margin: 0}}/>
+        </div>
+        <div style={{display: 'flex'}}>
+          <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>func</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.fadedBlue, display: 'inline', padding: 0, margin: 0}}>value</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'('}</pre>
+          <pre style={{color: palette.fadedBlue, display: 'inline', padding: 0, margin: 0}}>for</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>card:</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.green, display: 'inline', padding: 0, margin: 0}}>Card</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{') ->'}</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.deepBlue, display: 'inline', padding: 0, margin: 0}}>Int</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'{'}</pre>
+        </div>
+        <div style={{display: 'flex'}}>
+          <div style={{width: 30, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>guard</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>card.</pre>
+          <pre style={{color: palette.fadedBlue, display: 'inline', padding: 0, margin: 0}}>rank</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'>='}</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>0</pre>
+        </div>
+        <div style={{display: 'flex'}}>
+          <div style={{width: 52, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>&&</pre>
+          <div style={{width: 9.5, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>card.</pre>
+          <pre style={{color: palette.fadedBlue, display: 'inline', padding: 0, margin: 0}}>rank</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'<='}</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>13</pre>
+        </div>
+        <div style={{display: 'flex'}}>
+          <div style={{width: 52, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>&&</pre>
+          <div style={{width: 9.5, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'['}</pre>
+          <pre style={{color: palette.orange, display: 'inline', padding: 0, margin: 0}}>{'"h"'}</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{', '}</pre>
+          <pre style={{color: palette.orange, display: 'inline', padding: 0, margin: 0}}>{'"s"'}</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{', '}</pre>
+          <pre style={{color: palette.orange, display: 'inline', padding: 0, margin: 0}}>{'"d"'}</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{', '}</pre>
+          <pre style={{color: palette.orange, display: 'inline', padding: 0, margin: 0}}>{'"c"'}</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{']'}</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>.</pre>
+          <pre style={{color: palette.fadedBlue, display: 'inline', padding: 0, margin: 0}}>contains</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'('}</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>card.</pre>
+          <pre style={{color: palette.fadedBlue, display: 'inline', padding: 0, margin: 0}}>suit</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{')'}</pre>
+        </div>
+        <div style={{display: 'flex'}}>
+          <div style={{width: 30, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>else</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'{'}</pre>
+        </div>
+        <div style={{display: 'flex', alignItems: 'center'}}>
+          <div style={{width: 30, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'return the value of the Card...'}</p>
+        </div>
+        <div style={{display: 'flex'}}>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'}'}</pre>
+        </div>
+      </div>
+      <div style={{height: 24, padding: 0, margin: 0}}/>
+      <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', width: '100%', gap: 16}}>
+        <div style={{display: 'flex', alignItems: 'center'}}>
+          <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'proper function call, no errors'}</p>
+        </div>
+        <CallFunction suit={'"d"'} rank={2}/>
+      </div>
+      <div style={{height: 24, padding: 0, margin: 0}}/>
+      <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', width: '100%', gap: 16}}>
+        <ErrorMessage txt={'Card.rank not in [0, 13)'}/>
+        <CallFunction suit={'"h"'} rank={13}/>
+      </div>
+      <div style={{height: 24, padding: 0, margin: 0}}/>
+      <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', width: '100%', gap: 16}}>
+        <ErrorMessage txt={'Card.suit not in {"h", "s", "d", "c"}'}/>
+        <CallFunction suit={'"hearts"'} rank={12}/>
+      </div>
+      </div>
+  )
+}
+
 function PremiumSwiftTitle() {
   return (
     <pre style={{
@@ -83,7 +229,7 @@ function PremiumSwiftTitle() {
   )
 }
 
-function Content() {
+function PremiumSwiftFunc() {
   return (
       <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', maxWidth: '400px', width: '75vw', whiteSpace: 'pre-wrap', padding: 0}}>
       <PremiumSwiftTitle/>
@@ -200,7 +346,16 @@ function Content() {
   )
 }
 
-function PremiumSwiftFunc() {
+function Content() {
+  return (
+    <div style={{display: 'flex', flexDirection: 'row', gap: 48, alignItems: 'flex-start'}}>
+      <SwiftFunc/>
+      <PremiumSwiftFunc/>
+    </div>
+  )
+}
+
+function PremiumSwiftFuncPage() {
   return (
     <ContentScaffold 
     content={ Content() }
@@ -210,4 +365,4 @@ function PremiumSwiftFunc() {
   )
 }
 
-export default PremiumSwiftFunc
+export default PremiumSwiftFuncPage
