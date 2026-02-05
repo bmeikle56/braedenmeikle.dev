@@ -22,8 +22,8 @@ function App() {
         <Route path='/projects/action-player' element={<ActionPlayerProject/>}/>
         <Route path='/projects/bz-dev' element={<BZDevProject/>}/>
         <Route path='/projects/premium-swift' element={<PremiumSwiftProject/>}/>
-        {/* <Route path='/projects/premium-swift/func' element={<PremiumSwiftFunc/>}/> */}
-        {/* <Route path='/projects/premium-swift/view' element={<PremiumSwiftView/>}/> */}
+        <Route path='/projects/premium-swift/func' element={<PremiumSwiftFunc/>}/>
+        <Route path='/projects/premium-swift/view' element={<PremiumSwiftView/>}/>
         {/* <Route path='/projects/premium-swift/wrap' element={<PremiumSwiftWrap/>}/> */}
         <Route path='/projects/zards-tracker' element={<ZardsTrackerProject theme={greenTheme}/>}/>
       </Routes>

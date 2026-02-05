@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import PremiumSwiftFunc from '../../proj/premium-swift/PremiumSwiftFunc'
+import PremiumSwiftFont from './PremiumSwiftFont'
 
 function PremiumSwiftButton({ txt, route }) {
   const navigate = useNavigate()
@@ -15,7 +15,7 @@ function PremiumSwiftButton({ txt, route }) {
     }}
     onClick={() => navigate(route)}
     >
-      <PremiumSwiftFunc txt={txt}/>
+      <PremiumSwiftFont txt={txt}/>
     </button>
   )
 }

@@ -75,8 +75,8 @@ function Content() {
   return (
     <div style={{display: 'flex', flexDirection: 'column', gap: 12, background: 'black', borderRadius: 12, padding: 20}}>
       <PremiumSwiftFont txt={'<PremiumSwift>'}/>
-      <PremiumSwiftButton txt={'<PremiumFunc/>'}/>
-      <PremiumSwiftButton txt={'<PremiumView/>'}/>
+      <PremiumSwiftButton txt={'<PremiumFunc/>'} route={'/projects/premium-swift/func'}/>
+      <PremiumSwiftButton txt={'<PremiumView/>'} route={'/projects/premium-swift/view'}/>
       {/* <PremiumSwiftButton txt={'<PremiumWrap/>'}/> */}
       <PremiumSwiftFont txt={'<PremiumSwift/>'}/>
     </div>
