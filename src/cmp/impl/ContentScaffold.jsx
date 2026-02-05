@@ -8,37 +8,66 @@ function ContentScaffold({ content, txt, route, theme = greenTheme, useBits = tr
   const isLoading = useLoading()
 
   if (isLoading) {
-    if (useBits) {
-      return <LoadingBits theme={theme}/>
-    } else {
-      return <LoadingBoxes theme={theme}/>
-    }
-  } 
+    return useBits ? <LoadingBits theme={theme}/> : <LoadingBoxes theme={theme}/>
+  }
 
   return (
-    <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{
-      delay: .25
-    }}
+    <>
+      {/* fixed position wallpapper */}
+      <div
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 0,
+        pointerEvents: 'none',
+      }}
     >
-      <Wallpaper theme={theme}/>
-      <div style={{zIndex: 1, position: 'relative'}}>
-        <BackButton txt={txt} route={route} theme={theme}/>
-          <div style={{
-          height: '80vh',
-          width: '100vw',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'column',
+      <Wallpaper/>
+    </div>
+
+      {/* fixed position back button */}
+      <BackButton
+        txt={txt}
+        route={route}
+        theme={theme}
+        style={{
+          position: 'fixed',
+          top: 20,
+          left: 20,
+          zIndex: 3,
         }}
+      />
+
+      {/* scrollable content layer */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.25 }}
+        style={{
+          position: 'relative',
+          zIndex: 1,
+          height: '100vh',
+          overflowY: 'auto', // enables scrolling
+          overflowX: 'hidden',
+          WebkitOverflowScrolling: 'touch', // smoother mobile scroll
+        }}
+      >
+        <div
+          style={{
+            minHeight: '100vh',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
+            // paddingTop: 80,   // space so content isn't under back button
+            // paddingBottom: 40,
+          }}
         >
           {content}
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </>
   )
 }
 

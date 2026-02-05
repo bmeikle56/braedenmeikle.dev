@@ -4,20 +4,23 @@ function BackButton({ txt, route, theme }) {
   const navigate = useNavigate()
 
   return (
-    <button style={{
-      display: 'flex',
-      color: theme,
-      fontSize: 12,
-      background: 'black',
-      border: 'none',
-      borderRadius: 8,
-      padding: '6px 10px 6px 10px',
-      margin: '15px 0 0 15px',
-      textShadow: `0 0 6px ${theme}, 0 0 6px ${theme}, 0 0 6px ${theme}`
-    }}
-    onClick={() => navigate(route)}
+    <button
+      style={{
+        position: 'fixed', 
+        top: 20,
+        left: 20,
+        zIndex: 10,
+        display: 'flex',
+        color: theme,
+        fontSize: 12,
+        background: 'black',
+        border: 'none',
+        borderRadius: 8,
+        padding: '6px 10px',
+      }}
+      onClick={() => navigate(route)}
     >
-      &lArr; {txt}
+      <pre style={{fontSize: 12, color: theme, textShadow: `0 0 6px ${theme}, 0 0 6px ${theme}, 0 0 6px ${theme}`, margin: 0}}>{txt}</pre>
     </button>
   )
 }
