@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 
-function ProjectButton({ theme, txt, route }) {
+function ForwardButton({ theme, txt, route }) {
   const navigate = useNavigate()
 
   return (
@@ -23,4 +23,4 @@ function ProjectButton({ theme, txt, route }) {
   )
 }
 
-export default ProjectButton
+export default ForwardButton

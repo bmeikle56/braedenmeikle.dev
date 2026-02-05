@@ -3,7 +3,7 @@ import Cells from './impl/Cells'
 import ErrorMessage from './impl/ErrorMessage'
 import Footer from './impl/Footer'
 import Fun from './impl/Fun'
-import ProjectButton from './impl/ProjectButton'
+import ForwardButton from './impl/ForwardButton'
 import Wallpaper from './impl/Wallpaper'
 import { VDiv, HDiv, ExpandingHDiv } from './impl/GeometricDiv'
 import ContentScaffold from './impl/ContentScaffold'
@@ -29,7 +29,7 @@ export {
   Inlinetxt,
   LoadingBits,
   LoadingBoxes,
-  ProjectButton,
+  ForwardButton,
   Spacer,
   VDiv,
   Video,

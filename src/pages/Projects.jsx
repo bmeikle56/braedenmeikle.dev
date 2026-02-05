@@ -1,14 +1,14 @@
-import { ContentScaffold, ProjectButton } from '../cmp/Components'
+import { ContentScaffold, ForwardButton } from '../cmp/Components'
 import { greenTheme } from '../styles/colors'
 
 function Projects() {
   return (
     <ContentScaffold content={
       <div>
-        <ProjectButton theme={greenTheme} txt={'actionplayer.app'} route={'/projects/action-player'}/>
-        <ProjectButton theme={greenTheme} txt={'berzerkagile.dev'} route={'/projects/bz-dev'}/>
-        <ProjectButton theme={greenTheme} txt={'premiumswift.dev'} route={'/projects/premium-swift'}/>
-        <ProjectButton theme={greenTheme} txt={'zardstracker.app'} route={'/projects/zards-tracker'}/>
+        <ForwardButton theme={greenTheme} txt={'actionplayer.app'} route={'/projects/action-player'}/>
+        <ForwardButton theme={greenTheme} txt={'berzerkagile.dev'} route={'/projects/bz-dev'}/>
+        <ForwardButton theme={greenTheme} txt={'premiumswift.dev'} route={'/projects/premium-swift'}/>
+        <ForwardButton theme={greenTheme} txt={'zardstracker.app'} route={'/projects/zards-tracker'}/>
       </div>
     }
     txt={'Home'}
