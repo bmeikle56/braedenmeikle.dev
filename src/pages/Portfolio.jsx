@@ -27,7 +27,8 @@ function PortFolioCell({
           <pre style={{color: color, margin: 0, padding: 6}}>{title}</pre>
         </div>
         <div style={{display: 'flex', borderRadius: 8, width: 'fit-content', height: 'fit-content', background: 'rgb(20,20,20)'}}>
-          <pre style={{color: txtColor, margin: 0, padding: 6}}>{`${start} - ${end}`}</pre>
+          {end && <pre style={{color: txtColor, margin: 0, padding: 6}}>{`${start} - ${end}`}</pre>}
+          {!end && <pre style={{color: txtColor, margin: 0, padding: 6}}>{`${start}`}</pre>}
         </div>
       </div>
 
@@ -47,7 +48,7 @@ function PortFolioCell({
 
 function PortfolioContent() {
   return (
-    <div>
+    <div style={{display: 'flex', flexDirection: 'column', gap: 24}}>
       <PortFolioCell 
       title={'Georgia Tech'}
       subtitle={`BS in Computer Science`}
@@ -55,6 +56,28 @@ function PortfolioContent() {
       end={'2023'}
       color={'rgb(175,125,12)'}
       bullets={['Teaching Assistant for Objects and Design', 'Peer Mentor for Computer Science students', 'iOS Developer for VIP team']}
+      />
+      <PortFolioCell 
+      title={'Hiya'}
+      subtitle={`Software Engineer Intern`}
+      start={'2022'}
+      color={'rgb(250,0,250)'}
+      bullets={['iOS Developer intern on mobile team']}
+      />
+      <PortFolioCell 
+      title={'GEICO'}
+      subtitle={`Software Engineer Intern`}
+      start={'2023'}
+      color={'rgb(0,0,250)'}
+      bullets={['iOS Developer intern on mobile team']}
+      />
+      <PortFolioCell 
+      title={'GEICO'}
+      subtitle={`Software Engineer`}
+      start={'2024'}
+      end={'2026'}
+      color={'rgb(0,0,250)'}
+      bullets={['Full-stack developer on chatbot team', 'iOS Developer on mobile team']}
       />
     </div>
   )
