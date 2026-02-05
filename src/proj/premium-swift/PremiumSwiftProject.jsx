@@ -1,4 +1,5 @@
-import { ContentScaffold, ErrorMessage } from '../../cmp/Components'
+import { ContentScaffold, ForwardButton, PremiumSwiftFont, PremiumSwiftButton } from '../../cmp/Components'
+import { greenTheme } from '../../styles/colors'
 
 let palette = {
   white: 'rgb(255,255,255)',
@@ -70,28 +71,13 @@ function CallFunction({ suit, rank }) {
   )
 }
 
-function PremiumSwiftFont({ txt, indent }) {
-  return (
-    <pre style={{
-      display: 'inline-block',
-      fontSize: 24,
-      color: 'rgb(174, 0, 255)',
-      width: 'fit-content',
-      textShadow: '0 0 12px rgb(155,155,155)',
-      borderRadius: 20,
-      margin: 0,
-      paddingLeft: indent ? 24 : 0
-    }}>{txt}</pre>
-  )
-}
-
 function Content() {
   return (
     <div style={{display: 'flex', flexDirection: 'column', gap: 12, background: 'black', borderRadius: 12, padding: 20}}>
       <PremiumSwiftFont txt={'<PremiumSwift>'}/>
-      <PremiumSwiftFont txt={'<PremiumFunc/>'} indent={true}/>
-      <PremiumSwiftFont txt={'<PremiumView/>'} indent={true}/>
-      <PremiumSwiftFont txt={'<PremiumWrap/>'} indent={true}/>
+      <PremiumSwiftButton txt={'<PremiumFunc/>'}/>
+      <PremiumSwiftButton txt={'<PremiumView/>'}/>
+      {/* <PremiumSwiftButton txt={'<PremiumWrap/>'}/> */}
       <PremiumSwiftFont txt={'<PremiumSwift/>'}/>
     </div>
   )

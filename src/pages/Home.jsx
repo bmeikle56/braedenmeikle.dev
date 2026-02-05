@@ -1,27 +1,16 @@
-import { motion } from 'framer-motion'
-import { useLoading } from '../hooks/useLoading'
-import { Footer, Fun, LoadingBits, Wallpaper } from '../cmp/Components'
+import { Footer, Fun } from '../cmp/Components'
 import { greenTheme } from '../styles/colors'
+import { ContentScaffold } from '../cmp/Components'
 
 function Home() {
-  const isLoading = useLoading()
-
   return (
-    <>
-      {isLoading ? (
-        <LoadingBits theme={greenTheme}/>
-      ) : (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.25 }}
-        >
-          <Wallpaper/>
-          <Fun theme={greenTheme}/>
-          <Footer theme={greenTheme}/>
-        </motion.div>
-      )}
-    </>
+    <ContentScaffold content={
+      <div>
+        <Fun theme={greenTheme}/>
+        <Footer theme={greenTheme}/>
+      </div>
+    }
+    />
   )
 }
 

@@ -1,14 +1,13 @@
 import { motion } from 'framer-motion'
 import { useLoading } from '../../hooks/useLoading'
-
-import { BackButton, LoadingBits, LoadingBoxes, Wallpaper } from '../Components'
+import { BackButton, LoadingBits, Wallpaper } from '../Components'
 import { greenTheme } from '../../styles/colors'
 
-function ContentScaffold({ content, txt, route, theme = greenTheme, useBits = true }) {
+function ContentScaffold({ content, txt, route, theme = greenTheme }) {
   const isLoading = useLoading()
 
   if (isLoading) {
-    return useBits ? <LoadingBits theme={theme}/> : <LoadingBoxes theme={theme}/>
+    return <LoadingBits theme={theme}/>
   }
 
   return (
@@ -30,7 +29,7 @@ function ContentScaffold({ content, txt, route, theme = greenTheme, useBits = tr
     </div>
 
       {/* fixed position back button */}
-      <BackButton
+      {txt && route && <BackButton
         txt={txt}
         route={route}
         theme={theme}
@@ -40,7 +39,7 @@ function ContentScaffold({ content, txt, route, theme = greenTheme, useBits = tr
           left: 20,
           zIndex: 3,
         }}
-      />
+      />}
 
       {/* scrollable content layer */}
       <div
@@ -61,8 +60,6 @@ function ContentScaffold({ content, txt, route, theme = greenTheme, useBits = tr
             justifyContent: 'center',
             alignItems: 'center',
             flexDirection: 'column',
-            // paddingTop: 80,   // space so content isn't under back button
-            // paddingBottom: 40,
           }}
         >
           {content}

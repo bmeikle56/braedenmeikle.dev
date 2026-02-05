@@ -13,8 +13,7 @@ function Projects() {
     }
     txt={'Home'}
     route={'/'}
-    theme={greenTheme}
-    useBits={true}/>
+    />
   )
 }
 

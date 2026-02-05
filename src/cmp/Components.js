@@ -12,6 +12,8 @@ import { ccode, CCode, BZCCode } from './impl/CCode'
 import { Spacer } from './impl/Spacer'
 import { BZtxt, Inlinetxt } from './impl/BZtxt'
 import { LoadingBits, LoadingBoxes } from './impl/LoadingAnims'
+import PremiumSwiftFont from './impl/PremiumSwiftFont'
+import PremiumSwiftButton from './impl/PremiumSwiftButton'
 
 export {
   BackButton,
@@ -33,5 +35,7 @@ export {
   Spacer,
   VDiv,
   Video,
-  Wallpaper
+  Wallpaper,
+  PremiumSwiftFont,
+  PremiumSwiftButton
 }
