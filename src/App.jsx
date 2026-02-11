@@ -9,6 +9,8 @@ import BZDevProject from './proj/bz-dev/BZDevProject.jsx'
 import Portfolio from './pages/Portfolio.jsx'
 import ZardsTrackerProject from './proj/zards-tracker/ZardsTrackerProject.jsx'
 import { greenTheme } from './styles/colors.js'
+import PremiumSwiftFuncPage from './proj/premium-swift/PremiumSwiftFuncPage.jsx'
+import PremiumSwiftView from './proj/premium-swift/PremiumSwiftView.jsx'
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
         <Route path='/projects/action-player' element={<ActionPlayerProject/>}/>
         <Route path='/projects/bz-dev' element={<BZDevProject/>}/>
         <Route path='/projects/premium-swift' element={<PremiumSwiftProject/>}/>
+        <Route path='/projects/premium-swift/func' element={<PremiumSwiftFuncPage/>}/>
+        <Route path='/projects/premium-swift/view' element={<PremiumSwiftView/>}/>
+        {/* <Route path='/projects/premium-swift/wrap' element={<PremiumSwiftWrap/>}/> */}
         <Route path='/projects/zards-tracker' element={<ZardsTrackerProject theme={greenTheme}/>}/>
       </Routes>
     </Router>
