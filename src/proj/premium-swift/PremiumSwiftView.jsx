@@ -1,17 +1,5 @@
-import { ContentScaffold, ErrorMessage, PremiumSwiftTitle, SwiftTitle } from '../../cmp/Components'
-
-let palette = {
-  white: 'rgb(255,255,255)',
-  pink: 'rgba(186, 2, 100, 1)',
-  cyan: 'rgba(48, 182, 222, 1)',
-  fadedBlue: 'rgba(58, 139, 189, 1)',
-  deepBlue: 'rgba(3, 140, 225, 1)',
-  green: 'rgba(95, 227, 83, 1)',
-  orange: 'rgba(233, 70, 0, 1)',
-  purple: 'rgba(126, 89, 228, 1)',
-  comment: 'rgba(0, 166, 3, 1)',
-  darkComment: 'rgba(1, 81, 2, 1)',
-}
+import { ContentScaffold, PremiumSwiftTitle, SwiftFile, SwiftTitle } from '../../cmp/Components'
+import { palette } from '../../styles/colors'
 
 function Comments() {
   return (
@@ -41,6 +29,7 @@ function Swift() {
       <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', maxWidth: '400px', width: '75vw', whiteSpace: 'pre-wrap', padding: 0}}>
       <SwiftTitle/>
       <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', width: '100%'}}>
+        <SwiftFile txt={'CardView.swift'}/>
         <div style={{display: 'flex'}}>
           <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>struct</pre>
           <div style={{width: 8, padding: 0, margin: 0}}/>
@@ -51,6 +40,20 @@ function Swift() {
           <div style={{width: 8, padding: 0, margin: 0}}/>
           <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'{'}</pre>
         </div>
+        <div style={{display: 'flex'}}>
+          <div style={{width: 30, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.deepBlue, display: 'inline', padding: 0, margin: 0}}>{'@State'}</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>private</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.fadedBlue, display: 'inline', padding: 0, margin: 0}}>var</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.cyan, display: 'inline', padding: 0, margin: 0}}>viewModel</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>:</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'CardViewModel'}</pre>
+        </div>
+        <div style={{height: 24, padding: 0, margin: 0}}/>
         <div style={{display: 'flex'}}>
           <div style={{width: 30, padding: 0, margin: 0}}/>
           <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>func</pre>
@@ -122,10 +125,26 @@ function PremiumSwift() {
       <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', maxWidth: '400px', width: 'fit-content', whiteSpace: 'pre-wrap', padding: 0}}>
       <PremiumSwiftTitle/>
       <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', width: '100%'}}>
+        <SwiftFile txt={'CardView.swiftui'}/>
+        <div style={{height: 12, padding: 0, margin: 0}}/>
+        <div style={{display: 'flex'}}>
+          <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>{'@Model'}</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'('}</pre>
+          <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'CardViewModel'}</pre>
+          <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>{')'}</pre>
+        </div>
         <div style={{display: 'flex'}}>
           <pre style={{color: palette.deepBlue, display: 'inline', padding: 0, margin: 0}}>{'#View'}</pre>
           <div style={{width: 8, padding: 0, margin: 0}}/>
           <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'{'}</pre>
+        </div>
+        <div style={{display: 'flex'}}>
+          <div style={{width: 30, padding: 0, margin: 0}}/>
+          <div style={{display: 'flex', alignItems: 'center', width: '100%'}}>
+            <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
+            <div style={{width: 8, padding: 0, margin: 0}}/>
+            <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'...'}</p>
+          </div>
         </div>
         <div style={{display: 'flex'}}>
           <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'}'}</pre>

@@ -15,10 +15,11 @@ import { LoadingBits, LoadingBoxes } from './impl/LoadingAnims'
 import PremiumSwiftFont from './impl/PremiumSwiftFont'
 import PremiumSwiftButton from './impl/PremiumSwiftButton'
 import { PremiumSwiftTitle, SwiftTitle } from './impl/SwiftTypes'
+import { SwiftFile } from './impl/SwiftFile'
 
 export {
   BackButton,
-  ccode,
+  ccode, // move this to colors.js
   CCode,
   BZCCode,
   BZtxt,
@@ -40,5 +41,6 @@ export {
   PremiumSwiftFont,
   PremiumSwiftButton,
   PremiumSwiftTitle,
-  SwiftTitle
+  SwiftTitle,
+  SwiftFile
 }

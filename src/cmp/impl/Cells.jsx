@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-// import { txtCol, specialColor } from '../styles/colors.js'
 import { HDiv, VDiv } from './GeometricDiv'
 
 function Cell({ content }) {
