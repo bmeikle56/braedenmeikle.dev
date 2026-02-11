@@ -14,6 +14,7 @@ import { BZtxt, Inlinetxt } from './impl/BZtxt'
 import { LoadingBits, LoadingBoxes } from './impl/LoadingAnims'
 import PremiumSwiftFont from './impl/PremiumSwiftFont'
 import PremiumSwiftButton from './impl/PremiumSwiftButton'
+import { PremiumSwiftTitle, SwiftTitle } from './impl/SwiftTypes'
 
 export {
   BackButton,
@@ -37,5 +38,7 @@ export {
   Video,
   Wallpaper,
   PremiumSwiftFont,
-  PremiumSwiftButton
+  PremiumSwiftButton,
+  PremiumSwiftTitle,
+  SwiftTitle
 }

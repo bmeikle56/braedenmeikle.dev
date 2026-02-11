@@ -1,4 +1,4 @@
-import { ContentScaffold, ErrorMessage } from '../../cmp/Components'
+import { ContentScaffold, ErrorMessage, PremiumSwiftTitle, SwiftTitle } from '../../cmp/Components'
 
 let palette = {
   white: 'rgb(255,255,255)',
@@ -67,19 +67,6 @@ function CallFunction({ suit, rank }) {
         <pre style={{ color: palette.white, margin: 0 }}>{')'}</pre>
       </div>
     </div>
-  )
-}
-
-function SwiftTitle() {
-  return (
-    <pre style={{
-      fontSize: '24px',
-      color: 'rgb(50,50,50)',
-      background: 'rgb(13,13,13)', 
-      padding: 20,
-      // textShadow: '0 0 12px rgb(155,155,155)',
-      borderRadius: 20
-    }}>{'<Swift/>'}</pre>
   )
 }
 
@@ -269,19 +256,6 @@ function SwiftFunc() {
           </div>
         </div>
       </div>
-  )
-}
-
-function PremiumSwiftTitle() {
-  return (
-    <pre style={{
-      fontSize: '24px',
-      color: 'rgb(174, 0, 255)',
-      background: 'rgb(13,13,13)', 
-      padding: 20,
-      textShadow: '0 0 12px rgb(155,155,155)',
-      borderRadius: 20
-    }}>{'<PremiumSwift/>'}</pre>
   )
 }
 
