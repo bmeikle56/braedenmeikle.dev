@@ -13,13 +13,30 @@ function Bullet({ txt }) {
   )
 }
 
+function Skills({ skills }) {
+  function Skill({ txt }) {
+    return (
+      <div style={{display: 'flex', alignItems: 'center', borderRadius: 8, width: 'fit-content', height: 'fit-content', background: bgColor, padding: 6}}>
+        <pre style={{color: txtColor, margin: 0}}>{txt}</pre>
+      </div>
+    )
+  }
+
+  return (
+    <div style={{display: 'flex', flexWrap: 'wrap', gap: 6}}>
+      {skills.map((txt, _) => <Skill txt={txt}/>)}
+    </div>
+  )
+}
+
 function PortFolioCell({
   title,
   subtitle,
   loc,
   start,
   end,
-  bullets
+  bullets,
+  skills
 }) {
   return (
     <div style={{display: 'flex', background: 'rgb(10,10,10)', flexDirection: 'column', borderRadius: 12, width: 320, height: 'fit-content', padding: 12, gap: 12, boxShadow: '0px 0px 8px rgb(12,123,0)'}}>
@@ -50,6 +67,12 @@ function PortFolioCell({
 
       {/* description */}
       {bullets && bullets.map((txt, _) => <Bullet txt={txt}/>)}
+
+      {/* divider */}
+      {skills && <div style={{height: 1, borderRadius: 2, width: '100%', background: bgColor}}/>}
+
+      {/* skills */}
+      {skills && <Skills skills={skills}/>}
     </div>
   )
 }
@@ -91,12 +114,14 @@ function PortfolioContent() {
         subtitle={`iOS Developer Intern`}
         loc={'Remote'}
         start={'2022'}
+        skills={['Git', 'Swift', 'Objective-C', 'Xcode', 'Xcode Instruments']}
         />
         <PortFolioCell 
         title={'GEICO'}
         subtitle={`iOS Developer Intern`}
         loc={'Remote'}
         start={'2023'}
+        skills={['Git', 'Swift', 'Objective-C', 'Xcode', 'Xcode Instruments']}
         />
         <PortFolioCell 
         title={'GEICO'}
@@ -105,6 +130,7 @@ function PortfolioContent() {
         start={'2024'}
         end={'2026'}
         bullets={['Full-stack developer on chatbot team', 'iOS Developer on mobile team']}
+        skills={['Git', 'Flutter', 'Swift', 'Objective-C', 'Xcode', 'Cursor', 'Azure', 'JavaScript', 'TypeScript', 'Postgres', 'SQL', 'REST APIs']}
         />
       </div>
     </div>
