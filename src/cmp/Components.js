@@ -1,4 +1,3 @@
-import BackButton from './impl/BackButton'
 import Cells from './impl/Cells'
 import ErrorMessage from './impl/ErrorMessage'
 import Footer from './impl/Footer'
@@ -18,7 +17,6 @@ import { PremiumSwiftTitle, SwiftTitle } from './impl/SwiftTypes'
 import { SwiftFile } from './impl/SwiftFile'
 
 export {
-  BackButton,
   ccode, // move this to colors.js
   CCode,
   BZCCode,

@@ -13,9 +13,7 @@ function ZardsTrackerProject({ theme }) {
           textShadow: `0 0 5px ${theme}, 0 0 12px ${theme}, 0 0 15px ${theme}`
           }}>Coming soon!</pre>
       </div>
-    }
-    txt={'Projects'}
-    route={'/projects'}/>
+    }/>
   )
 }
 

@@ -375,11 +375,7 @@ function Content() {
 
 function PremiumSwiftFuncPage() {
   return (
-    <ContentScaffold 
-    content={ Content() }
-    txt={'PremiumSwift'}
-    route={'/projects/premium-swift'}
-    />
+    <ContentScaffold content={ Content() }/>
   )
 }
 

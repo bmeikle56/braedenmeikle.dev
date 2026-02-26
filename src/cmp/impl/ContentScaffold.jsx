@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import { useLoading } from '../../hooks/useLoading'
-import { BackButton, LoadingBits, Wallpaper } from '../Components'
+import { LoadingBits, Wallpaper } from '../Components'
 import { greenTheme } from '../../styles/colors'
 
-function ContentScaffold({ content, txt, route, theme = greenTheme }) {
+function ContentScaffold({ content, theme = greenTheme }) {
   const isLoading = useLoading()
 
   if (isLoading) {
@@ -27,20 +27,6 @@ function ContentScaffold({ content, txt, route, theme = greenTheme }) {
     >
       <Wallpaper/>
     </div>
-
-      {/* fixed position back button */}
-      {txt && route && <BackButton
-        txt={txt}
-        route={route}
-        theme={theme}
-        style={{
-          position: 'fixed',
-          top: 20,
-          left: 20,
-          zIndex: 3,
-        }}
-      />}
-
       {/* scrollable content layer */}
       <div
         style={{

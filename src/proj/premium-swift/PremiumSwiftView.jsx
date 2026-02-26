@@ -165,11 +165,7 @@ function Content() {
 
 function PremiumSwiftView() {
   return (
-    <ContentScaffold 
-    content={ Content() }
-    txt={'PremiumSwift'}
-    route={'/projects/premium-swift'}
-    />
+    <ContentScaffold content={ Content() }/>
   )
 }
 

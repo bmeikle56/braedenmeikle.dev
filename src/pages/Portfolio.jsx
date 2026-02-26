@@ -139,9 +139,7 @@ function PortfolioContent() {
 
 function Portfolio() {
   return (
-    <ContentScaffold content={PortfolioContent()}
-    txt={'Home'}
-    route={'/'}/>
+    <ContentScaffold content={PortfolioContent()}/>
   )
 }
 

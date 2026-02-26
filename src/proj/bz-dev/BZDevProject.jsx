@@ -78,11 +78,7 @@ function BZDevContent() {
 
 function BZDevProject() {
   return (
-    <ContentScaffold
-    content={BZDevContent()}
-    txt={'Projects'}
-    route={'/projects'}
-    />
+    <ContentScaffold content={BZDevContent()}/>
   )
 }
 

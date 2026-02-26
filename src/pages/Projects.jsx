@@ -10,10 +10,7 @@ function Projects() {
         <ForwardButton theme={greenTheme} txt={'premiumswift.dev'} route={'/projects/premium-swift'}/>
         <ForwardButton theme={greenTheme} txt={'zardstracker.app'} route={'/projects/zards-tracker'}/>
       </div>
-    }
-    txt={'Home'}
-    route={'/'}
-    />
+    }/>
   )
 }
 
