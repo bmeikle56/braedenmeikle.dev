@@ -137,7 +137,7 @@ function PortfolioContent() {
   )
 }
 
-function Portfolio({ theme }) {
+function Portfolio() {
   return (
     <ContentScaffold content={PortfolioContent()}
     txt={'Home'}

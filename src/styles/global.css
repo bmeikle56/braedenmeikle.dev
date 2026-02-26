@@ -45,6 +45,13 @@ html, body {
   }
 }
 
+@media screen and (max-height: 800px) {
+  #portfolio {
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .footer-txt {
     font-size: 10px;

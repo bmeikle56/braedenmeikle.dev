@@ -17,7 +17,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/portfolio' element={<Portfolio theme={greenTheme}/>}/>
+        <Route path='/portfolio' element={<Portfolio/>}/>
         <Route path='/projects' element={<Projects/>}/>
         <Route path='/projects/action-player' element={<ActionPlayerProject/>}/>
         <Route path='/projects/bz-dev' element={<BZDevProject/>}/>
