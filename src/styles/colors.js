@@ -1,5 +1,5 @@
 const darkGray = 'rgb(120,120,120)'
-const superDarkGray = 'rgb(20,20,20)'
+const superDarkGray = 'rgb(30,30,30)'
 const txtCol = 'rgb(200,200,200)'
 const onlineGreen = 'rgb(0,192,0)'
 const greenTheme = 'rgb(20,200,0)'

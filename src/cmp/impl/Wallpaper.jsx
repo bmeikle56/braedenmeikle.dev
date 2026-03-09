@@ -38,11 +38,11 @@ function Wallpaper() {
       >
         {Array.from({ length: total }).map((_, i) => {
           const hasColor = Math.floor(Math.random() * 8) === 0
-          const greenShades = ['rgb(0,15,0)', 'rgb(0,30,0)', 'rgb(0,45,0)']
+          const shades = ['rgb(10,10,10)', 'rgb(20,20,20)', 'rgb(30,30,30)']
 
           let color
           if (hasColor) {
-            color = greenShades[Math.floor(Math.random() * greenShades.length)]
+            color = shades[Math.floor(Math.random() * shades.length)]
           } else {
             color = 'black'
           }
